@@ -47,6 +47,7 @@ public class Inicio extends javax.swing.JFrame {
         colorNodoVisitado = new javax.swing.JLabel();
         txtColorNodoRecorrido = new javax.swing.JLabel();
         BotonSalir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         EleccionDestino = new javax.swing.JComboBox<>();
         BuscarCamino = new javax.swing.JButton();
         EleccionOrigen = new javax.swing.JComboBox<>();
@@ -123,6 +124,9 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 50, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Mapa/mapa.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 870, 680));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 850, 730));
 
@@ -512,6 +516,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel colorDestino;
     private javax.swing.JLabel colorNodoVisitado;
     private javax.swing.JLabel colorOrigen;
+    private javax.swing.JLabel jLabel1;
     public static javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel kmRecorridos;
