@@ -311,72 +311,64 @@ public class Inicio extends javax.swing.JFrame {
         nombreOrigen = (String) EleccionOrigen.getSelectedItem();
         nombreDestino = (String) EleccionDestino.getSelectedItem();
 
-        if ("Alta Verapaz".equals(nombreOrigen)) {
+        if ("Oriental".equals(nombreOrigen)) {
             origen = 0;
         }
-        if ("Baja Verapaz".equals(nombreOrigen)) {
+        if ("San Nicolas".equals(nombreOrigen)) {
             origen = 1;
         }
-        if ("Chimaltenango".equals(nombreOrigen)) {
+        if ("Aguacaliente".equals(nombreOrigen)) {
             origen = 2;
         }
-        if ("Chiquimula".equals(nombreOrigen)) {
+        if ("Guadalupe".equals(nombreOrigen)) {
             origen = 3;
         }
-        if ("Petén".equals(nombreOrigen)) {
+        if ("Dulce Nombre".equals(nombreOrigen)) {
             origen = 4;
         }
-        if ("El Progreso".equals(nombreOrigen)) {
+        if ("Tres Ríos".equals(nombreOrigen)) {
             origen = 5;
         }
-        if ("Quiché".equals(nombreOrigen)) {
+        if ("Cachí".equals(nombreOrigen)) {
             origen = 6;
         }
-        if ("Escuintla".equals(nombreOrigen)) {
+        if ("Orosí".equals(nombreOrigen)) {
             origen = 7;
         }
-        if ("Guatemala".equals(nombreOrigen)) {
+        if ("Paraíso".equals(nombreOrigen)) {
             origen = 8;
         }
-        if ("Huehuetenango".equals(nombreOrigen)) {
+        if ("Santiago".equals(nombreOrigen)) {
             origen = 9;
         }
-        if ("Izabal".equals(nombreOrigen)) {
+        if ("El Tejar".equals(nombreOrigen)) {
             origen = 10;
         }
-        if ("Jalapa".equals(nombreOrigen)) {
+        if ("Cervantes".equals(nombreOrigen)) {
             origen = 11;
         }
-        if ("Jutiapa".equals(nombreOrigen)) {
+        if ("Juan Viñas".equals(nombreOrigen)) {
             origen = 12;
         }
-        if ("Quetzaltenango".equals(nombreOrigen)) {
+        if ("Concepción".equals(nombreOrigen)) {
             origen = 13;
         }
-        if ("Retalhuleu".equals(nombreOrigen)) {
+        if ("Occidental".equals(nombreOrigen)) {
             origen = 14;
         }
-        if ("Sacatepéquez".equals(nombreOrigen)) {
+        if ("Carmen".equals(nombreOrigen)) {
             origen = 15;
         }
-        if ("San Marcos".equals(nombreOrigen)) {
+        if ("Corralillo".equals(nombreOrigen)) {
             origen = 16;
         }
-        if ("Santa Rosa".equals(nombreOrigen)) {
+        if ("Tierra Blanca".equals(nombreOrigen)) {
             origen = 17;
         }
-        if ("Sololá".equals(nombreOrigen)) {
+        if ("Llano Grande".equals(nombreOrigen)) {
             origen = 18;
         }
-        if ("Suchitepéquez".equals(nombreOrigen)) {
-            origen = 19;
-        }
-        if ("Totonicapán".equals(nombreOrigen)) {
-            origen = 20;
-        }
-        if ("Zacapa".equals(nombreOrigen)) {
-            origen = 21;
-        }
+        
 
         if ("Alta Verapaz".equals(nombreDestino)) {
             destino = 0;
