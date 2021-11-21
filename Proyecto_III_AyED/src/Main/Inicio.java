@@ -370,72 +370,64 @@ public class Inicio extends javax.swing.JFrame {
         }
         
 
-        if ("Alta Verapaz".equals(nombreDestino)) {
+        if ("Oriental".equals(nombreDestino)) {
             destino = 0;
         }
-        if ("Baja Verapaz".equals(nombreDestino)) {
+        if ("San Nicolás".equals(nombreDestino)) {
             destino = 1;
         }
-        if ("Chimaltenango".equals(nombreDestino)) {
+        if ("Aguas Calientes".equals(nombreDestino)) {
             destino = 2;
         }
-        if ("Chiquimula".equals(nombreDestino)) {
+        if ("Guadalupe".equals(nombreDestino)) {
             destino = 3;
         }
-        if ("Petén".equals(nombreDestino)) {
+        if ("Dulce Nombre".equals(nombreDestino)) {
             destino = 4;
         }
-        if ("El Progreso".equals(nombreDestino)) {
+        if ("Tres Ríos".equals(nombreDestino)) {
             destino = 5;
         }
-        if ("Quiché".equals(nombreDestino)) {
+        if ("Cachí".equals(nombreDestino)) {
             destino = 6;
         }
-        if ("Escuintla".equals(nombreDestino)) {
+        if ("Orosí".equals(nombreDestino)) {
             destino = 7;
         }
-        if ("Guatemala".equals(nombreDestino)) {
+        if ("Paraíso".equals(nombreDestino)) {
             destino = 8;
         }
-        if ("Huehuetenango".equals(nombreDestino)) {
+        if ("Santiago".equals(nombreDestino)) {
             destino = 9;
         }
-        if ("Izabal".equals(nombreDestino)) {
+        if ("Tejar".equals(nombreDestino)) {
             destino = 10;
         }
-        if ("Jalapa".equals(nombreDestino)) {
+        if ("Cervantes".equals(nombreDestino)) {
             destino = 11;
         }
-        if ("Jutiapa".equals(nombreDestino)) {
+        if ("Juan Viñas".equals(nombreDestino)) {
             destino = 12;
         }
-        if ("Quetzaltenango".equals(nombreDestino)) {
+        if ("Concepción".equals(nombreDestino)) {
             destino = 13;
         }
-        if ("Retalhuleu".equals(nombreDestino)) {
+        if ("Occidental".equals(nombreDestino)) {
             destino = 14;
         }
-        if ("Sacatepéquez".equals(nombreDestino)) {
+        if ("Carmen".equals(nombreDestino)) {
             destino = 15;
         }
-        if ("San Marcos".equals(nombreDestino)) {
+        if ("Corralillo".equals(nombreDestino)) {
             destino = 16;
         }
-        if ("Santa Rosa".equals(nombreDestino)) {
+        if ("Tierra Blanca".equals(nombreDestino)) {
             destino = 17;
         }
-        if ("Sololá".equals(nombreDestino)) {
+        if ("Llano Grande".equals(nombreDestino)) {
             destino = 18;
         }
-        if ("Suchitepéquez".equals(nombreDestino)) {
-            destino = 19;
-        }
-        if ("Totonicapán".equals(nombreDestino)) {
-            destino = 20;
-        }
-        if ("Zacapa".equals(nombreDestino)) {
-            destino = 21;
-        }
+        
 
         if (origen == destino) {
             Font fuente = new Font("Arial", Font.BOLD, 18);
