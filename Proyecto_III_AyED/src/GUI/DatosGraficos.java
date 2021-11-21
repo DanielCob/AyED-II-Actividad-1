@@ -2,12 +2,16 @@ package GUI;
 
 public class DatosGraficos {
 
-    private final double[][] MatrizCoeficiente = new double[51][51];
-    private final int[][] MatrizAdyacencia = new int[51][51];
-    private final int[] cordenadaX = new int[51];
-    private final int[] cordenadaY = new int[51];
-    private final String[] nombre = new String[51];
-    private int[] enArbol;
+    private final double MatrizCoeficiente[][] = new double[51][51];
+    private final int MatrizAdyacencia[][] = new int[51][51];
+    private final int cordenadaX[] = new int[51];
+    private final int cordenadaY[] = new int[51];
+    private final String nombre[] = new String[51];
+    private int enArbol[];
+
+    public DatosGraficos() {
+
+    }
 
     public double getmCoeficiente(int i, int j) {
         return MatrizCoeficiente[i][j];

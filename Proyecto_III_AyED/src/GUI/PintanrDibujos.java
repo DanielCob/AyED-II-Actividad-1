@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
+
 public class PintanrDibujos {
 
     public PintanrDibujos() {
@@ -16,7 +17,7 @@ public class PintanrDibujos {
     public static void pinta_Circulo(Graphics g, int x, int y, String n) {
         //g.drawOval(x, y-10, 20, 20);
         ((Graphics2D) g).setColor(Color.ORANGE);
-        ((Graphics2D) g).setStroke(new BasicStroke(2));//leda el grosor al circulo
+        ((Graphics2D) g).setStroke(new BasicStroke(2));//leda el grosor al circulo        
         ((Graphics2D) g).fillOval(x, y, 15, 15);
         ((Graphics2D) g).setColor(Color.BLACK);
         ((Graphics2D) g).drawOval(x, y, 15, 15);
@@ -59,13 +60,13 @@ public class PintanrDibujos {
         ((Graphics2D) g).setStroke(stroke);
         g.setColor(color);
         g.drawLine(x1 + 10, y1 + 10, x2 + 10, y2 + 10);
-
+        
     }
-    //Pintando nodos que son recorridos
+//Pintando nodos que son recorridos
     public static void seleccionNodo(Graphics g, int x, int y, String n, Color co) {
-
+        
         ((Graphics2D) g).setColor(co);
-        ((Graphics2D) g).setStroke(new BasicStroke(2));//leda el grosor del contorno al circulo
+        ((Graphics2D) g).setStroke(new BasicStroke(2));//leda el grosor del contorno al circulo        
         ((Graphics2D) g).fillOval(x, y, 15, 15);//tamanio del circulo
         ((Graphics2D) g).setColor(Color.BLUE);
         ((Graphics2D) g).drawOval(x, y, 15, 15);

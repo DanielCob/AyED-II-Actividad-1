@@ -1,6 +1,11 @@
-package DataStructure;
+package DataStructures;
 
+import GUI.DatosGraficos;
+import GUI.PintanrDibujos;
+import static Main.Inicio.PintarFiguras;
+import static Main.Inicio.jPanel1;
 import java.awt.Color;
+
 
 public class AlgoritmoDijkstra {
 
@@ -99,5 +104,6 @@ public class AlgoritmoDijkstra {
                     arboles.getCordeX(nodoFinal), 
                     arboles.getCordeY(nodoFinal), null, Color.RED);//Pintando Nodo del destino
         
-    }   
+    }
+
 }
