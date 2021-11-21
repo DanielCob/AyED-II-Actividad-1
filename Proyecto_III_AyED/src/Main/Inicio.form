@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="33" green="33" red="33" type="rgb"/>
+      <Color blue="33" green="ff" red="cc" type="rgb"/>
     </Property>
     <Property name="undecorated" type="boolean" value="true"/>
   </Properties>
@@ -38,7 +38,7 @@
           <Font name="Tahoma" size="18" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="0" red="0" type="rgb"/>
+          <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Mostrar Caminos"/>
       </Properties>
@@ -47,7 +47,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="150" y="40" width="220" height="50"/>
+          <AbsoluteConstraints x="200" y="40" width="220" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -208,38 +208,35 @@
     <Component class="javax.swing.JComboBox" name="EleccionDestino">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="99" red="0" type="rgb"/>
+          <Color blue="33" green="33" red="33" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="0" red="0" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="22">
-            <StringItem index="0" value="Alta Verapaz"/>
-            <StringItem index="1" value="Baja Verapaz"/>
-            <StringItem index="2" value="Chimaltenango"/>
-            <StringItem index="3" value="Chiquimula"/>
-            <StringItem index="4" value="Pet&#xe9;n"/>
-            <StringItem index="5" value="El Progreso"/>
-            <StringItem index="6" value="Quich&#xe9;"/>
-            <StringItem index="7" value="Escuintla"/>
-            <StringItem index="8" value="Guatemala"/>
-            <StringItem index="9" value="Huehuetenango"/>
-            <StringItem index="10" value="Izabal"/>
-            <StringItem index="11" value="Jalapa"/>
-            <StringItem index="12" value="Jutiapa"/>
-            <StringItem index="13" value="Quetzaltenango"/>
-            <StringItem index="14" value="Retalhuleu"/>
-            <StringItem index="15" value="Sacatep&#xe9;quez"/>
-            <StringItem index="16" value="San Marcos"/>
-            <StringItem index="17" value="Santa Rosa"/>
-            <StringItem index="18" value="Solol&#xe1;"/>
-            <StringItem index="19" value="Suchitep&#xe9;quez"/>
-            <StringItem index="20" value="Totonicap&#xe1;n"/>
-            <StringItem index="21" value="Zacapa"/>
+          <StringArray count="19">
+            <StringItem index="0" value="Oriental"/>
+            <StringItem index="1" value="San Nicol&#xe1;s"/>
+            <StringItem index="2" value="Agua Caliente"/>
+            <StringItem index="3" value="Guadalupe"/>
+            <StringItem index="4" value="Dulce Nombre"/>
+            <StringItem index="5" value="Tres R&#xed;os"/>
+            <StringItem index="6" value="Cach&#xed;"/>
+            <StringItem index="7" value="Orosi"/>
+            <StringItem index="8" value="Paraiso"/>
+            <StringItem index="9" value="Santiago"/>
+            <StringItem index="10" value="Tejar"/>
+            <StringItem index="11" value="Cervantes"/>
+            <StringItem index="12" value="Juan Vi&#xf1;as"/>
+            <StringItem index="13" value="Concepci&#xf3;n"/>
+            <StringItem index="14" value="Occidental"/>
+            <StringItem index="15" value="Carmen"/>
+            <StringItem index="16" value="Corralillo"/>
+            <StringItem index="17" value="Tierra Blanca"/>
+            <StringItem index="18" value="Llano Grande"/>
           </StringArray>
         </Property>
       </Properties>
@@ -251,67 +248,64 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="260" width="460" height="40"/>
+          <AbsoluteConstraints x="80" y="270" width="430" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="BuscarCamino">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="99" red="0" type="rgb"/>
+          <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="0" red="33" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Buscar Camino mas corto"/>
+        <Property name="text" type="java.lang.String" value="Ruta mas corta&#xa;"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BuscarCaminoActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="140" y="350" width="300" height="60"/>
+          <AbsoluteConstraints x="150" y="330" width="300" height="60"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="EleccionOrigen">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="99" red="0" type="rgb"/>
+          <Color blue="33" green="33" red="33" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="0" red="0" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="22">
-            <StringItem index="0" value="Alta Verapaz"/>
-            <StringItem index="1" value="Baja Verapaz"/>
-            <StringItem index="2" value="Chimaltenango"/>
-            <StringItem index="3" value="Chiquimula"/>
-            <StringItem index="4" value="Pet&#xe9;n"/>
-            <StringItem index="5" value="El Progreso"/>
-            <StringItem index="6" value="Quich&#xe9;"/>
-            <StringItem index="7" value="Escuintla"/>
-            <StringItem index="8" value="Guatemala"/>
-            <StringItem index="9" value="Huehuetenango"/>
-            <StringItem index="10" value="Izabal"/>
-            <StringItem index="11" value="Jalapa"/>
-            <StringItem index="12" value="Jutiapa"/>
-            <StringItem index="13" value="Quetzaltenango"/>
-            <StringItem index="14" value="Retalhuleu"/>
-            <StringItem index="15" value="Sacatep&#xe9;quez"/>
-            <StringItem index="16" value="San Marcos"/>
-            <StringItem index="17" value="Santa Rosa"/>
-            <StringItem index="18" value="Solol&#xe1;"/>
-            <StringItem index="19" value="Suchitep&#xe9;quez"/>
-            <StringItem index="20" value="Totonicap&#xe1;n"/>
-            <StringItem index="21" value="Zacapa"/>
+          <StringArray count="19">
+            <StringItem index="0" value="Oriental"/>
+            <StringItem index="1" value="San Nicol&#xe1;s"/>
+            <StringItem index="2" value="Agua Caliente"/>
+            <StringItem index="3" value="Guadalupe"/>
+            <StringItem index="4" value="Dulce Nombre"/>
+            <StringItem index="5" value="Tres R&#xed;os"/>
+            <StringItem index="6" value="Cach&#xed;"/>
+            <StringItem index="7" value="Orosi"/>
+            <StringItem index="8" value="Paraiso"/>
+            <StringItem index="9" value="Santiago"/>
+            <StringItem index="10" value="Tejar"/>
+            <StringItem index="11" value="Cervantes"/>
+            <StringItem index="12" value="Juan Vi&#xf1;as"/>
+            <StringItem index="13" value="Concepci&#xf3;n"/>
+            <StringItem index="14" value="Occidental"/>
+            <StringItem index="15" value="Carmen"/>
+            <StringItem index="16" value="Corralillo"/>
+            <StringItem index="17" value="Tierra Blanca"/>
+            <StringItem index="18" value="Llano Grande"/>
           </StringArray>
         </Property>
       </Properties>
@@ -323,7 +317,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="140" width="460" height="30"/>
+          <AbsoluteConstraints x="80" y="160" width="430" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -333,7 +327,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="40" y="630" width="510" height="70"/>
+          <AbsoluteConstraints x="40" y="500" width="500" height="200"/>
         </Constraint>
       </Constraints>
 
@@ -359,7 +353,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="150" y="210" width="260" height="40"/>
+          <AbsoluteConstraints x="170" y="210" width="260" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -394,7 +388,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="150" y="90" width="250" height="40"/>
+          <AbsoluteConstraints x="180" y="100" width="250" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -464,14 +458,14 @@
           <Font name="Tahoma" size="18" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="0" red="0" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="                            Bienvenido al sistema"/>
+        <Property name="text" type="java.lang.String" value="                                          Path finder"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="0" width="530" height="30"/>
+          <AbsoluteConstraints x="40" y="0" width="500" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -484,14 +478,14 @@
           <Font name="Tahoma" size="18" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="0" red="0" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="                         Kilometros recorridos:"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="30" y="430" width="510" height="30"/>
+          <AbsoluteConstraints x="10" y="430" width="570" height="30"/>
         </Constraint>
       </Constraints>
     </Component>

@@ -63,20 +63,20 @@ public class Inicio extends javax.swing.JFrame {
         kmRecorridos2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(51, 51, 51));
+        setBackground(new java.awt.Color(204, 255, 51));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MostrarCaminos.setBackground(new java.awt.Color(255, 255, 204));
         MostrarCaminos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        MostrarCaminos.setForeground(new java.awt.Color(0, 0, 204));
+        MostrarCaminos.setForeground(new java.awt.Color(0, 0, 0));
         MostrarCaminos.setText("Mostrar Caminos");
         MostrarCaminos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MostrarCaminosActionPerformed(evt);
             }
         });
-        getContentPane().add(MostrarCaminos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 220, 50));
+        getContentPane().add(MostrarCaminos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 220, 50));
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -130,49 +130,49 @@ public class Inicio extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 850, 730));
 
-        EleccionDestino.setBackground(new java.awt.Color(0, 153, 51));
+        EleccionDestino.setBackground(new java.awt.Color(51, 51, 51));
         EleccionDestino.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        EleccionDestino.setForeground(new java.awt.Color(0, 0, 153));
-        EleccionDestino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alta Verapaz", "Baja Verapaz", "Chimaltenango", "Chiquimula", "Petén", "El Progreso", "Quiché", "Escuintla", "Guatemala", "Huehuetenango", "Izabal", "Jalapa", "Jutiapa", "Quetzaltenango", "Retalhuleu", "Sacatepéquez", "San Marcos", "Santa Rosa", "Sololá", "Suchitepéquez", "Totonicapán", "Zacapa" }));
+        EleccionDestino.setForeground(new java.awt.Color(255, 255, 255));
+        EleccionDestino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oriental", "San Nicolás", "Agua Caliente", "Guadalupe", "Dulce Nombre", "Tres Ríos", "Cachí", "Orosi", "Paraiso", "Santiago", "Tejar", "Cervantes", "Juan Viñas", "Concepción", "Occidental", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande" }));
         EleccionDestino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EleccionDestinoActionPerformed(evt);
             }
         });
-        getContentPane().add(EleccionDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 460, 40));
+        getContentPane().add(EleccionDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 430, 30));
 
-        BuscarCamino.setBackground(new java.awt.Color(0, 153, 51));
+        BuscarCamino.setBackground(new java.awt.Color(0, 0, 0));
         BuscarCamino.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        BuscarCamino.setForeground(new java.awt.Color(51, 0, 204));
-        BuscarCamino.setText("Buscar Camino mas corto");
+        BuscarCamino.setForeground(new java.awt.Color(255, 255, 255));
+        BuscarCamino.setText("Ruta mas corta\n");
         BuscarCamino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarCaminoActionPerformed(evt);
             }
         });
-        getContentPane().add(BuscarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 300, 60));
+        getContentPane().add(BuscarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 300, 60));
 
-        EleccionOrigen.setBackground(new java.awt.Color(0, 153, 51));
+        EleccionOrigen.setBackground(new java.awt.Color(51, 51, 51));
         EleccionOrigen.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        EleccionOrigen.setForeground(new java.awt.Color(0, 0, 153));
-        EleccionOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alta Verapaz", "Baja Verapaz", "Chimaltenango", "Chiquimula", "Petén", "El Progreso", "Quiché", "Escuintla", "Guatemala", "Huehuetenango", "Izabal", "Jalapa", "Jutiapa", "Quetzaltenango", "Retalhuleu", "Sacatepéquez", "San Marcos", "Santa Rosa", "Sololá", "Suchitepéquez", "Totonicapán", "Zacapa" }));
+        EleccionOrigen.setForeground(new java.awt.Color(255, 255, 255));
+        EleccionOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oriental", "San Nicolás", "Agua Caliente", "Guadalupe", "Dulce Nombre", "Tres Ríos", "Cachí", "Orosi", "Paraiso", "Santiago", "Tejar", "Cervantes", "Juan Viñas", "Concepción", "Occidental", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande" }));
         EleccionOrigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EleccionOrigenActionPerformed(evt);
             }
         });
-        getContentPane().add(EleccionOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 460, 30));
+        getContentPane().add(EleccionOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 430, 30));
 
         txtKMAcumulados.setColumns(20);
         txtKMAcumulados.setRows(5);
         jScrollPane1.setViewportView(txtKMAcumulados);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 630, 510, 70));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 500, 200));
 
         txtDestino.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         txtDestino.setForeground(new java.awt.Color(255, 255, 255));
         txtDestino.setText("Selecciona el destino:");
-        getContentPane().add(txtDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 260, 40));
+        getContentPane().add(txtDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 260, 40));
 
         kmRecorridos.setBackground(new java.awt.Color(51, 51, 51));
         kmRecorridos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -183,7 +183,7 @@ public class Inicio extends javax.swing.JFrame {
         txtOrigen.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         txtOrigen.setForeground(new java.awt.Color(255, 255, 255));
         txtOrigen.setText("Selecciona el origen:");
-        getContentPane().add(txtOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 250, 40));
+        getContentPane().add(txtOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 250, 40));
 
         kmRecorridos1.setBackground(new java.awt.Color(51, 51, 51));
         kmRecorridos1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -205,17 +205,17 @@ public class Inicio extends javax.swing.JFrame {
 
         LateralSuperior2.setBackground(new java.awt.Color(51, 51, 51));
         LateralSuperior2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        LateralSuperior2.setForeground(new java.awt.Color(0, 0, 153));
-        LateralSuperior2.setText("                            Bienvenido al sistema");
+        LateralSuperior2.setForeground(new java.awt.Color(255, 255, 255));
+        LateralSuperior2.setText("                                          Path finder");
         LateralSuperior2.setOpaque(true);
-        getContentPane().add(LateralSuperior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 530, 30));
+        getContentPane().add(LateralSuperior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 500, 30));
 
         kmRecorridos2.setBackground(new java.awt.Color(51, 51, 51));
         kmRecorridos2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        kmRecorridos2.setForeground(new java.awt.Color(0, 0, 153));
+        kmRecorridos2.setForeground(new java.awt.Color(255, 255, 255));
         kmRecorridos2.setText("                         Kilometros recorridos:");
         kmRecorridos2.setOpaque(true);
-        getContentPane().add(kmRecorridos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 510, 30));
+        getContentPane().add(kmRecorridos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 570, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
