@@ -56,6 +56,7 @@ public class Inicio extends javax.swing.JFrame {
         txtDestino = new javax.swing.JLabel();
         kmRecorridos = new javax.swing.JLabel();
         txtOrigen = new javax.swing.JLabel();
+        kmRecorridos1 = new javax.swing.JLabel();
         LateralSuperior = new javax.swing.JLabel();
         LateralSuperior1 = new javax.swing.JLabel();
         LateralSuperior2 = new javax.swing.JLabel();
@@ -177,12 +178,18 @@ public class Inicio extends javax.swing.JFrame {
         kmRecorridos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         kmRecorridos.setForeground(new java.awt.Color(0, 0, 153));
         kmRecorridos.setOpaque(true);
-        getContentPane().add(kmRecorridos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, 280, 40));
+        getContentPane().add(kmRecorridos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 390, 40));
 
         txtOrigen.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         txtOrigen.setForeground(new java.awt.Color(255, 255, 255));
         txtOrigen.setText("Selecciona el origen:");
         getContentPane().add(txtOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 250, 40));
+
+        kmRecorridos1.setBackground(new java.awt.Color(51, 51, 51));
+        kmRecorridos1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        kmRecorridos1.setForeground(new java.awt.Color(0, 0, 153));
+        kmRecorridos1.setOpaque(true);
+        getContentPane().add(kmRecorridos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 140, 40));
 
         LateralSuperior.setBackground(new java.awt.Color(51, 51, 51));
         LateralSuperior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -208,7 +215,7 @@ public class Inicio extends javax.swing.JFrame {
         kmRecorridos2.setForeground(new java.awt.Color(255, 255, 255));
         kmRecorridos2.setText("                         Kilometros recorridos:");
         kmRecorridos2.setOpaque(true);
-        getContentPane().add(kmRecorridos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 420, 570, 40));
+        getContentPane().add(kmRecorridos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 570, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -248,33 +255,31 @@ public class Inicio extends javax.swing.JFrame {
 
         double coe[][] = {
           // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
-            {0, 0, 0, 4.2, 2.4, 0, 0, 0, 6.9, 0, 4.7, 0, 0, 0, 0, 0, 0, 0, 0}, // 1
-            {0, 0, 0, 0, 0, 7.0, 0, 0, 0, 0, 0, 0, 0, 9.0, 0, 0, 0, 0, 0}, // 2
-            {0, 0, 0, 0, 5.2, 0, 0, 0, 10.2, 0, 0, 0, 0, 0, 0, 0, 0, 14.4, 0}, // 3
-            {4.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.8, 0, 0, 0, 3.4, 6.7, 0, 0, 0}, // 4
-            {2.6, 0, 5.2, 0, 0, 0, 0, 0, 0, 18.5, 5.3, 0, 0, 0, 0, 0, 0, 0, 0}, // 5
-            {0, 7.4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 6
-            {0, 0, 0, 0, 0, 0, 0, 11.4, 0, 0, 0, 16.9, 0, 0, 0, 0, 0, 27.1, 0}, // 7
-            {0, 0, 0, 0, 0, 0, 11.4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 8
-            {7.2, 0, 11.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7.8, 0, 0, 0, 0}, // 9
-            {0, 0, 0, 0, 19.2, 0, 0, 0, 0, 0, 24.1, 3.5, 11.9, 0, 0, 0, 0, 0, 0}, // 10
-            {4.2, 0, 0, 2.8, 5.2, 0, 0, 0, 0, 23.3, 0, 0, 0, 0, 0, 8.9, 0, 0, 0}, // 11 
-            {0, 0, 0, 0, 0, 0, 14.2, 0, 0, 3.5, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 12
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 11.9, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 13
-            {0, 9.6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32.3, 0, 15.7}, // 14
-            {0, 0, 0, 3.5, 0, 0, 0, 0, 7.8, 0, 0, 0, 0, 0, 0,3.8, 0, 0, 11.0}, // 15
-            {0, 0, 0, 6.2, 0, 0, 0, 0, 0, 0, 7.7, 0, 0, 0, 3.4, 0, 0, 0, 0}, // 16
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31.8, 0, 0, 0, 30.6, 0}, // 17
-            {0, 0, 14.6, 0, 0, 0, 27.8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29.9, 0, 0}, // 18
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14.8, 10.4, 0, 0, 0, 0}  // 19      
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 1
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 2
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 3
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 4
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 5
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 6
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 7
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 8
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 9
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 10
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 11 
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 12
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 13
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 14
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 15
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 16
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 17
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 18
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}  // 19      
             ,};
 
                 //  1     2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18   19    
         int xx1[] = {350, 180, 370, 338, 370, 160, 480, 470, 310, 500, 358, 510, 550, 215, 300, 315, 110, 340, 260};
         int yy1[] = {270, 250, 300, 230, 250, 280, 335, 385, 280, 280, 220, 310, 250, 235, 245, 180, 380, 360, 255};
         String nom[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"};
-      
-
       
         for (int j = 0; j < 19; j++) {
             arboles.setCordeX(j, xx1[j]);
@@ -499,6 +504,7 @@ public class Inicio extends javax.swing.JFrame {
     public static javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel kmRecorridos;
+    private javax.swing.JLabel kmRecorridos1;
     private javax.swing.JLabel kmRecorridos2;
     private javax.swing.JLabel txtColorDestino;
     private javax.swing.JLabel txtColorNodoRecorrido;
