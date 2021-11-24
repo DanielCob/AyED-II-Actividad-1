@@ -60,12 +60,16 @@ public class App extends javax.swing.JFrame {
         gas = new javax.swing.JLabel();
         AyudaAlViajero = new javax.swing.JLabel();
         habitantes = new javax.swing.JLabel();
-        JLTiempo3 = new javax.swing.JLabel();
+        JLSeleccionar = new javax.swing.JLabel();
         interes = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         min_atrasos = new javax.swing.JSpinner();
         txtDestino1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        JLTiempo4 = new javax.swing.JLabel();
+        EleccionCiudad = new javax.swing.JComboBox<>();
+        VerInfo = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 51));
@@ -121,7 +125,7 @@ public class App extends javax.swing.JFrame {
                 BuscarCaminoActionPerformed(evt);
             }
         });
-        getContentPane().add(BuscarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 300, 60));
+        getContentPane().add(BuscarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 220, 40));
 
         MostrarCaminos.setBackground(new java.awt.Color(255, 255, 204));
         MostrarCaminos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
@@ -131,7 +135,7 @@ public class App extends javax.swing.JFrame {
                 MostrarCaminosActionPerformed(evt);
             }
         });
-        getContentPane().add(MostrarCaminos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 210, 50));
+        getContentPane().add(MostrarCaminos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 180, 30));
 
         EleccionDestino.setBackground(new java.awt.Color(51, 51, 51));
         EleccionDestino.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
@@ -142,7 +146,7 @@ public class App extends javax.swing.JFrame {
                 EleccionDestinoActionPerformed(evt);
             }
         });
-        getContentPane().add(EleccionDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 420, 30));
+        getContentPane().add(EleccionDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 160, 30));
 
         EleccionOrigen.setBackground(new java.awt.Color(51, 51, 51));
         EleccionOrigen.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
@@ -153,23 +157,23 @@ public class App extends javax.swing.JFrame {
                 EleccionOrigenActionPerformed(evt);
             }
         });
-        getContentPane().add(EleccionOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 420, 30));
+        getContentPane().add(EleccionOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 160, 30));
 
         txtDestino.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         txtDestino.setForeground(new java.awt.Color(255, 255, 255));
         txtDestino.setText("Ingrese los minutos de atraso:");
-        getContentPane().add(txtDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 260, 40));
+        getContentPane().add(txtDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 260, 40));
 
         kmRecorridos.setBackground(new java.awt.Color(51, 51, 51));
         kmRecorridos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         kmRecorridos.setForeground(new java.awt.Color(255, 255, 255));
         kmRecorridos.setOpaque(true);
-        getContentPane().add(kmRecorridos, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 310, 40));
+        getContentPane().add(kmRecorridos, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 310, 40));
 
         txtOrigen.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         txtOrigen.setForeground(new java.awt.Color(255, 255, 255));
         txtOrigen.setText("Selecciona el origen:");
-        getContentPane().add(txtOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 250, 40));
+        getContentPane().add(txtOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 240, 30));
 
         LateralSuperior.setBackground(new java.awt.Color(51, 51, 51));
         LateralSuperior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -184,9 +188,9 @@ public class App extends javax.swing.JFrame {
         getContentPane().add(LateralSuperior1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 700, 560, 30));
 
         LateralSuperior2.setBackground(new java.awt.Color(51, 51, 51));
-        LateralSuperior2.setFont(new java.awt.Font("Dubai", 1, 36)); // NOI18N
+        LateralSuperior2.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         LateralSuperior2.setForeground(new java.awt.Color(255, 255, 255));
-        LateralSuperior2.setText("                  Path finder");
+        LateralSuperior2.setText("                                      Path finder");
         LateralSuperior2.setOpaque(true);
         getContentPane().add(LateralSuperior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 500, 60));
 
@@ -194,28 +198,28 @@ public class App extends javax.swing.JFrame {
         varTiempo.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         varTiempo.setForeground(new java.awt.Color(255, 255, 255));
         varTiempo.setOpaque(true);
-        getContentPane().add(varTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, 350, 40));
+        getContentPane().add(varTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 350, 40));
 
         kmRecorridos3.setBackground(new java.awt.Color(51, 51, 51));
         kmRecorridos3.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         kmRecorridos3.setForeground(new java.awt.Color(255, 255, 255));
         kmRecorridos3.setText("Kilometros recorridos:");
         kmRecorridos3.setOpaque(true);
-        getContentPane().add(kmRecorridos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 500, 40));
+        getContentPane().add(kmRecorridos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 500, 40));
 
         gas.setBackground(new java.awt.Color(51, 51, 51));
         gas.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         gas.setForeground(new java.awt.Color(255, 255, 255));
         gas.setText("Gasolineras: ");
         gas.setOpaque(true);
-        getContentPane().add(gas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 660, 500, 40));
+        getContentPane().add(gas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 660, 640, 40));
 
         AyudaAlViajero.setBackground(new java.awt.Color(51, 51, 51));
         AyudaAlViajero.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         AyudaAlViajero.setForeground(new java.awt.Color(255, 255, 255));
-        AyudaAlViajero.setText("                                Ayuda al viajero");
+        AyudaAlViajero.setText("                                  Ayuda al viajero");
         AyudaAlViajero.setOpaque(true);
-        getContentPane().add(AyudaAlViajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 500, 40));
+        getContentPane().add(AyudaAlViajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 500, 50));
 
         habitantes.setBackground(new java.awt.Color(51, 51, 51));
         habitantes.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
@@ -224,12 +228,13 @@ public class App extends javax.swing.JFrame {
         habitantes.setOpaque(true);
         getContentPane().add(habitantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 500, 30));
 
-        JLTiempo3.setBackground(new java.awt.Color(51, 51, 51));
-        JLTiempo3.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        JLTiempo3.setForeground(new java.awt.Color(255, 255, 255));
-        JLTiempo3.setText("Tiempo estimado: ");
-        JLTiempo3.setOpaque(true);
-        getContentPane().add(JLTiempo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 230, 40));
+        JLSeleccionar.setBackground(new java.awt.Color(51, 51, 51));
+        JLSeleccionar.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        JLSeleccionar.setForeground(new java.awt.Color(255, 255, 255));
+        JLSeleccionar.setText("Seleccione una ciudad: ");
+        JLSeleccionar.setOpaque(true);
+        getContentPane().add(JLSeleccionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 490, 220, 30));
+        JLSeleccionar.getAccessibleContext().setAccessibleName("Seleccione una ciudad:");
 
         interes.setBackground(new java.awt.Color(51, 51, 51));
         interes.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
@@ -242,15 +247,45 @@ public class App extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 600, -1, -1));
 
         min_atrasos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        getContentPane().add(min_atrasos, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 100, 40));
+        getContentPane().add(min_atrasos, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 100, 40));
 
         txtDestino1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         txtDestino1.setForeground(new java.awt.Color(255, 255, 255));
         txtDestino1.setText("Selecciona el destino:");
-        getContentPane().add(txtDestino1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 260, 40));
+        getContentPane().add(txtDestino1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 240, 40));
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 500, 420));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 500, 270));
+
+        JLTiempo4.setBackground(new java.awt.Color(51, 51, 51));
+        JLTiempo4.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        JLTiempo4.setForeground(new java.awt.Color(255, 255, 255));
+        JLTiempo4.setText("Tiempo estimado: ");
+        JLTiempo4.setOpaque(true);
+        getContentPane().add(JLTiempo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 230, 40));
+
+        EleccionCiudad.setBackground(new java.awt.Color(51, 51, 51));
+        EleccionCiudad.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        EleccionCiudad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aguas Calientes", "Cachí", "Carmen", "Cervantes", "Concepción", "Corralillo", "Dulce Nombre", "Guadalupe", "Juan Viñas", "Llano Grande", "Oriental", "Orosi", "Paraiso", "San Nicolás", "Santiago", "Tejar", "Tierra Blanca", "Tres Ríos" }));
+        EleccionCiudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EleccionCiudadActionPerformed(evt);
+            }
+        });
+        getContentPane().add(EleccionCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 160, 30));
+
+        VerInfo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        VerInfo.setText("Ver Inforación");
+        VerInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerInfoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(VerInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 540, 240, 30));
+        VerInfo.getAccessibleContext().setAccessibleName("VerInforación");
+
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 520, 130));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -333,117 +368,60 @@ public class App extends javax.swing.JFrame {
 
         if ("Oriental".equals(nombreDestino)) {
             destino = 0;
-            habitantes.setText("Habitantes: 12.402");
-            interes.setText("Lugares: La basílica de los Ángeles, Hospital Dr.Max Peralta Jiménez");
-            gas.setText("Gasolineras: Gasolinera Raúl, Servicentro del oeste");
         }
         if ("San Nicolás".equals(nombreDestino)) {
             destino = 1;
-            habitantes.setText("Habitantes: 29.130");
-            interes.setText("Lugares: Productos Kitty, Quinta Bella Vista, Mucap");
-            gas.setText("Gasolineras: Servicentro Cristo Rey.");
         }
         if ("Agua Caliente".equals(nombreDestino)) {
             destino = 2;
-            habitantes.setText("Habitantes: 35.498");
-            interes.setText("Lugares: Iglesia de Navarro del Muñeco, Cabañas Cerro Verde");
-            gas.setText("Gasolineras: Gasolinera de Lima, Estación de Servicio Los Ángeles");
         }
         if ("Guadalupe".equals(nombreDestino)) {
             destino = 3;
-            habitantes.setText("Habitantes: 16.199");
-            interes.setText("Lugares: Parque Industrial Cartago, Vitec, Fortech Química");
-            gas.setText("Gasolineras: Estación de Servicio Coopinsermu RL");
         }
         if ("Dulce Nombre".equals(nombreDestino)) {
             destino = 4;
-            habitantes.setText("Habitantes: 11.773");
-            interes.setText("Lugares: La Casita del Quilting, Aves Don Aquiles");
-            gas.setText("Gasolineras: Delta Dulce Nombre, Servicentro y Autopulido Erick.");
         }
         if ("Tres Ríos".equals(nombreDestino)) {
             destino = 5;
-            habitantes.setText("Habitantes: 9.331");
-            interes.setText("Lugares: Iglesia Católica de Tres Ríos, Canopy Carpintera");
-            gas.setText("Gasolineras: ServiIndoor, Delta Tres Ríos.");
         }
         if ("Cachí".equals(nombreDestino)) {
             destino = 6;
-            habitantes.setText("Habitantes: 5.911");
-            interes.setText("Lugares: Finca Zalmari, Represa de Cachí, Escalada de Cachí.");
-            gas.setText("Gasolineras: Abastecedor Cachí");
         }
         if ("Orosí".equals(nombreDestino)) {
             destino = 7;
-            habitantes.setText("Habitantes: 10.002");
-            interes.setText("Lugares: Rancho Orosí, Río Palomo, II Giardino (Pizzeria)");
-            gas.setText("Gasolineras: SERPASA");
         }
         if ("Paraíso".equals(nombreDestino)) {
             destino = 8;
-            habitantes.setText("Habitantes: 21.507");
-            interes.setText("Lugares: Mirador de Orosí, UCR");
-            gas.setText("Gasolineras: SERPASA");
         }
         if ("Santiago".equals(nombreDestino)) {
             destino = 9;
-            habitantes.setText("Habitantes: 6.332");
-            interes.setText("Lugares: Iglesia de Santiago, Plaza de Fútbol de Santiago");
-            gas.setText("Gasolineras: Gasolinera Santiago");
         }
         if ("Tejar".equals(nombreDestino)) {
             destino = 10;
-            habitantes.setText("Habitantes: 26.630");
-            interes.setText("Lugares: Hotel el Guarco, El Quijongo, Residencial el Cacique");
-            gas.setText("Gasolineras: Servicentro el Guarco, Gasolinera Trova");
         }
         if ("Cervantes".equals(nombreDestino)) {
             destino = 11;
-            habitantes.setText("Habitantes: 6.759");
-            interes.setText("Lugares: Sala de Bellesa Nela, Countrytico");
-            gas.setText("Gasolineras: Estación de Servicio Cervantes");
         }
         if ("Juan Viñas".equals(nombreDestino)) {
             destino = 12;
-            habitantes.setText("Habitantes: 7.106");
-            interes.setText("Lugares: Mini Super Santa María, clínica de Juan Viñas");
-            gas.setText("Gasolineras: Gasolinera Juan Viñas");
         }
         if ("Concepción".equals(nombreDestino)) {
             destino = 13;
-            habitantes.setText("Habitantes: 18.667");
-            interes.setText("Lugares: Centro Comercial Monplaza, Ana Yanci Plazaola");
-            gas.setText("Gasolineras: Abastecedor Concepción");
         }
         if ("Occidental".equals(nombreDestino)) {
             destino = 14;
-            habitantes.setText("Habitantes: 10.394");
-            interes.setText("Lugares: Extreme Tech Cartago, Colegio de San Luis Gonzaga");
-            gas.setText("Gasolineras: Servicentro Metrópoli");
         }
         if ("Carmen".equals(nombreDestino)) {
             destino = 15;
-            habitantes.setText("Habitantes: 19.062");
-            interes.setText("Lugares: Cerrajería Autolock, Fashionista sneakers");
-            gas.setText("Gasolineras: Servicentro Cartago");
         }
         if ("Corralillo".equals(nombreDestino)) {
             destino = 16;
-            habitantes.setText("Habitantes: 11.833");
-            interes.setText("Lugares: Escuela La Guaria, Laguna lodge");
-            gas.setText("Gasolineras: Servicentro Río Conejo");
         }
         if ("Tierra Blanca".equals(nombreDestino)) {
             destino = 17;
-            habitantes.setText("Habitantes: 5.756");
-            interes.setText("Lugares: Pulperia San Bosco, Palí, Ferretería Vidal");
-            gas.setText("Gasolineras: Servicentro El Surco");
         }
         if ("Llano Grande".equals(nombreDestino)) {
             destino = 18;
-            habitantes.setText("Habitantes: 4.958");
-            interes.setText("Lugares: Flores Del Norte, Vivero Llano Verde");
-            gas.setText("Gasolineras: Llantera la plaza");
         }
 
         if (origen == destino) {
@@ -538,6 +516,129 @@ public class App extends javax.swing.JFrame {
         PintarFiguras(Numerotope, arboles);
     }//GEN-LAST:event_MostrarCaminosActionPerformed
 
+    private void EleccionCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EleccionCiudadActionPerformed
+        EleccionCiudad.setEnabled(true);
+    }//GEN-LAST:event_EleccionCiudadActionPerformed
+
+    private void VerInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerInfoActionPerformed
+         String Lugar;
+         Lugar = (String) EleccionCiudad.getSelectedItem();
+         
+         if ("Oriental".equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 12.402");
+            interes.setText("Lugares: La basílica de los Ángeles, Hospital Dr.Max Peralta Jiménez");
+            gas.setText("Gasolineras: Gasolinera Raúl, Servicentro del oeste");
+        }
+        if ("San Nicolás".equals(Lugar)) {
+         
+            habitantes.setText("Habitantes: 29.130");
+            interes.setText("Lugares: Productos Kitty, Quinta Bella Vista, Mucap");
+            gas.setText("Gasolineras: Servicentro Cristo Rey.");
+        }
+        if ("Aguas Calientes".equals(Lugar)) {
+          
+            habitantes.setText("Habitantes: 35.498");
+            interes.setText("Lugares: Iglesia de Navarro del Muñeco, Cabañas Cerro Verde");
+            gas.setText("Gasolineras: Gasolinera de Lima, Estación de Servicio Los Ángeles");
+        }
+        if ("Guadalupe".equals(Lugar)) {
+         
+            habitantes.setText("Habitantes: 16.199");
+            interes.setText("Lugares: Parque Industrial Cartago, Vitec, Fortech Química");
+            gas.setText("Gasolineras: Estación de Servicio Coopinsermu RL");
+        }
+        if ("Dulce Nombre".equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 11.773");
+            interes.setText("Lugares: La Casita del Quilting, Aves Don Aquiles");
+            gas.setText("Gasolineras: Delta Dulce Nombre, Servicentro y Autopulido Erick.");
+        }
+        if ("Tres Ríos".equals(Lugar)) {
+         
+            habitantes.setText("Habitantes: 9.331");
+            interes.setText("Lugares: Iglesia Católica de Tres Ríos, Canopy Carpintera");
+            gas.setText("Gasolineras: ServiIndoor, Delta Tres Ríos.");
+        }
+        if ("Cachí".equals(Lugar)) {
+          
+            habitantes.setText("Habitantes: 5.911");
+            interes.setText("Lugares: Finca Zalmari, Represa de Cachí, Escalada de Cachí.");
+            gas.setText("Gasolineras: Abastecedor Cachí");
+        }
+        if ("Orosi".equals(Lugar)) {
+          
+            habitantes.setText("Habitantes: 10.002");
+            interes.setText("Lugares: Rancho Orosí, Río Palomo, II Giardino (Pizzeria)");
+            gas.setText("Gasolineras: SERPASA");
+        }
+        if ("Paraiso".equals(Lugar)) {
+            
+            habitantes.setText("Habitantes: 21.507");
+            interes.setText("Lugares: Mirador de Orosí, UCR");
+            gas.setText("Gasolineras: SERPASA");
+        }
+        if ("Santiago".equals(Lugar)) {
+    
+            habitantes.setText("Habitantes: 6.332");
+            interes.setText("Lugares: Iglesia de Santiago, Plaza de Fútbol de Santiago");
+            gas.setText("Gasolineras: Gasolinera Santiago");
+        }
+        if ("Tejar".equals(Lugar)) {
+            
+            habitantes.setText("Habitantes: 26.630");
+            interes.setText("Lugares: Hotel el Guarco, El Quijongo, Residencial el Cacique");
+            gas.setText("Gasolineras: Servicentro el Guarco, Gasolinera Trova");
+        }
+        if ("Cervantes".equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 6.759");
+            interes.setText("Lugares: Sala de Bellesa Nela, Countrytico");
+            gas.setText("Gasolineras: Estación de Servicio Cervantes");
+        }
+        if ("Juan Viñas".equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 7.106");
+            interes.setText("Lugares: Mini Super Santa María, clínica de Juan Viñas");
+            gas.setText("Gasolineras: Gasolinera Juan Viñas");
+        }
+        if ("Concepción".equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 18.667");
+            interes.setText("Lugares: Centro Comercial Monplaza, Ana Yanci Plazaola");
+            gas.setText("Gasolineras: Abastecedor Concepción");
+        }
+        if ("Occidental".equals(Lugar)) {
+         
+            habitantes.setText("Habitantes: 10.394");
+            interes.setText("Lugares: Extreme Tech Cartago, Colegio de San Luis Gonzaga");
+            gas.setText("Gasolineras: Servicentro Metrópoli");
+        }
+        if ("Carmen".equals(Lugar)) {
+        
+            habitantes.setText("Habitantes: 19.062");
+            interes.setText("Lugares: Cerrajería Autolock, Fashionista sneakers");
+            gas.setText("Gasolineras: Servicentro Cartago");
+        }
+        if ("Corralillo".equals(Lugar)) {
+         
+            habitantes.setText("Habitantes: 11.833");
+            interes.setText("Lugares: Escuela La Guaria, Laguna lodge");
+            gas.setText("Gasolineras: Servicentro Río Conejo");
+        }
+        if ("Tierra Blanca".equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 5.756");
+            interes.setText("Lugares: Pulperia San Bosco, Palí, Ferretería Vidal");
+            gas.setText("Gasolineras: Servicentro El Surco");
+        }
+        if ("Llano Grande".equals(Lugar)) {
+            habitantes.setText("Habitantes: 4.958");
+            interes.setText("Lugares: Flores Del Norte, Vivero Llano Verde");
+            gas.setText("Gasolineras: Llantera la plaza");
+        }
+    }//GEN-LAST:event_VerInfoActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -576,13 +677,16 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel AyudaAlViajero;
     private javax.swing.JButton BotonSalir;
     private javax.swing.JButton BuscarCamino;
+    private javax.swing.JComboBox<String> EleccionCiudad;
     private javax.swing.JComboBox<String> EleccionDestino;
     private javax.swing.JComboBox<String> EleccionOrigen;
-    private javax.swing.JLabel JLTiempo3;
+    private javax.swing.JLabel JLSeleccionar;
+    private javax.swing.JLabel JLTiempo4;
     private javax.swing.JLabel LateralSuperior;
     private javax.swing.JLabel LateralSuperior1;
     private javax.swing.JLabel LateralSuperior2;
     private javax.swing.JButton MostrarCaminos;
+    private javax.swing.JButton VerInfo;
     private javax.swing.JLabel gas;
     private javax.swing.JLabel habitantes;
     private javax.swing.JLabel interes;
@@ -591,6 +695,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     public static javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel kmRecorridos;
     private javax.swing.JLabel kmRecorridos3;
     private javax.swing.JSpinner min_atrasos;
