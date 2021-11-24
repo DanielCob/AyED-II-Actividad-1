@@ -482,6 +482,7 @@ public class Inicio extends javax.swing.JFrame {
             new Inicio().setVisible(true);
         });
     }
+    //xd
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonSalir;

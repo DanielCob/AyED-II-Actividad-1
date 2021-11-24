@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package DataStructures;
+package GUI;
 
 import GUI.DatosGraficos;
 import GUI.PintanrDibujos;
 import static Main.Inicio.jPanel1;
-/**
- *
- * @author Jose H Elel
- */
+
 public class MostrarDibujos {
     private int tope=0;// lleva el # de nodos creado 
     private int nodoFin;
