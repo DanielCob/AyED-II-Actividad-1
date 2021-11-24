@@ -64,7 +64,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="580" width="70" height="40"/>
+              <AbsoluteConstraints x="150" y="580" width="70" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -84,7 +84,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="620" width="70" height="40"/>
+              <AbsoluteConstraints x="150" y="620" width="70" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -104,7 +104,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="660" width="150" height="40"/>
+              <AbsoluteConstraints x="150" y="660" width="150" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -209,8 +209,8 @@
             <StringItem index="4" value="Dulce Nombre"/>
             <StringItem index="5" value="Tres R&#xed;os"/>
             <StringItem index="6" value="Cach&#xed;"/>
-            <StringItem index="7" value="Orosi"/>
-            <StringItem index="8" value="Paraiso"/>
+            <StringItem index="7" value="Oros&#xed;"/>
+            <StringItem index="8" value="Para&#xed;so"/>
             <StringItem index="9" value="Santiago"/>
             <StringItem index="10" value="Tejar"/>
             <StringItem index="11" value="Cervantes"/>
@@ -256,8 +256,8 @@
             <StringItem index="4" value="Dulce Nombre"/>
             <StringItem index="5" value="Tres R&#xed;os"/>
             <StringItem index="6" value="Cach&#xed;"/>
-            <StringItem index="7" value="Orosi"/>
-            <StringItem index="8" value="Paraiso"/>
+            <StringItem index="7" value="Oros&#xed;"/>
+            <StringItem index="8" value="Para&#xed;so"/>
             <StringItem index="9" value="Santiago"/>
             <StringItem index="10" value="Tejar"/>
             <StringItem index="11" value="Cervantes"/>

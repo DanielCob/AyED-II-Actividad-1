@@ -80,21 +80,21 @@ public class Inicio extends javax.swing.JFrame {
         txtColorOrigen.setForeground(new java.awt.Color(51, 255, 51));
         txtColorOrigen.setText("Origen");
         txtColorOrigen.setOpaque(true);
-        jPanel1.add(txtColorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 70, 40));
+        jPanel1.add(txtColorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 580, 70, 40));
 
         txtColorDestino.setBackground(new java.awt.Color(51, 51, 51));
         txtColorDestino.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         txtColorDestino.setForeground(new java.awt.Color(255, 0, 0));
         txtColorDestino.setText("Destino");
         txtColorDestino.setOpaque(true);
-        jPanel1.add(txtColorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, 70, 40));
+        jPanel1.add(txtColorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 620, 70, 40));
 
         txtColorNodoRecorrido.setBackground(new java.awt.Color(51, 51, 51));
         txtColorNodoRecorrido.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         txtColorNodoRecorrido.setForeground(new java.awt.Color(0, 51, 255));
         txtColorNodoRecorrido.setText("Nodos Recorridos ");
         txtColorNodoRecorrido.setOpaque(true);
-        jPanel1.add(txtColorNodoRecorrido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, 150, 40));
+        jPanel1.add(txtColorNodoRecorrido, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 660, 150, 40));
 
         BotonSalir.setBackground(new java.awt.Color(255, 51, 51));
         BotonSalir.setFont(new java.awt.Font("Dubai", 1, 8)); // NOI18N
@@ -136,7 +136,7 @@ public class Inicio extends javax.swing.JFrame {
         EleccionDestino.setBackground(new java.awt.Color(51, 51, 51));
         EleccionDestino.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         EleccionDestino.setForeground(new java.awt.Color(255, 255, 255));
-        EleccionDestino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oriental", "San Nicolás", "Agua Caliente", "Guadalupe", "Dulce Nombre", "Tres Ríos", "Cachí", "Orosi", "Paraiso", "Santiago", "Tejar", "Cervantes", "Juan Viñas", "Concepción", "Occidental", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande" }));
+        EleccionDestino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oriental", "San Nicolás", "Agua Caliente", "Guadalupe", "Dulce Nombre", "Tres Ríos", "Cachí", "Orosí", "Paraíso", "Santiago", "Tejar", "Cervantes", "Juan Viñas", "Concepción", "Occidental", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande" }));
         EleccionDestino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EleccionDestinoActionPerformed(evt);
@@ -147,7 +147,7 @@ public class Inicio extends javax.swing.JFrame {
         EleccionOrigen.setBackground(new java.awt.Color(51, 51, 51));
         EleccionOrigen.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         EleccionOrigen.setForeground(new java.awt.Color(255, 255, 255));
-        EleccionOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oriental", "San Nicolás", "Agua Caliente", "Guadalupe", "Dulce Nombre", "Tres Ríos", "Cachí", "Orosi", "Paraiso", "Santiago", "Tejar", "Cervantes", "Juan Viñas", "Concepción", "Occidental", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande" }));
+        EleccionOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oriental", "San Nicolás", "Agua Caliente", "Guadalupe", "Dulce Nombre", "Tres Ríos", "Cachí", "Orosí", "Paraíso", "Santiago", "Tejar", "Cervantes", "Juan Viñas", "Concepción", "Occidental", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande" }));
         EleccionOrigen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EleccionOrigenActionPerformed(evt);
@@ -276,10 +276,10 @@ public class Inicio extends javax.swing.JFrame {
         if ("Oriental".equals(nombreOrigen)) {
             origen = 0;
         }
-        if ("San Nicolas".equals(nombreOrigen)) {
+        if ("San Nicolás".equals(nombreOrigen)) {
             origen = 1;
         }
-        if ("Aguacaliente".equals(nombreOrigen)) {
+        if ("Agua Caliente".equals(nombreOrigen)) {
             origen = 2;
         }
         if ("Guadalupe".equals(nombreOrigen)) {
@@ -303,7 +303,7 @@ public class Inicio extends javax.swing.JFrame {
         if ("Santiago".equals(nombreOrigen)) {
             origen = 9;
         }
-        if ("El Tejar".equals(nombreOrigen)) {
+        if ("Tejar".equals(nombreOrigen)) {
             origen = 10;
         }
         if ("Cervantes".equals(nombreOrigen)) {
@@ -339,12 +339,11 @@ public class Inicio extends javax.swing.JFrame {
         }
         if ("San Nicolás".equals(nombreDestino)) {
             destino = 1;
-
             habitantes.setText("Habitantes: 29.130");
             interes.setText("Lugares: Productos Kitty, Quinta Bella Vista, Mucap");
             gas.setText("Gasolineras: Servicentro Cristo Rey.");
         }
-        if ("Aguas Calientes".equals(nombreDestino)) {
+        if ("Agua Caliente".equals(nombreDestino)) {
             destino = 2;
             habitantes.setText("Habitantes: 35.498");
             interes.setText("Lugares: Iglesia de Navarro del Muñeco, Cabañas Cerro Verde");
@@ -472,7 +471,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel1.paint(jPanel1.getGraphics());
 
         int Matriz[][] = {
-            // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
+          // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
             {0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, // 1
             {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}, // 2
             {0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0}, // 3
