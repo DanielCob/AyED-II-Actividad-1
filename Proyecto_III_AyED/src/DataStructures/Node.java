@@ -1,14 +1,14 @@
 package DataStructures;
 
 
-public class Nodo {    
+public class Node {    
    private  int nombre ;
    private boolean visitado ;
    private boolean etiqueta;
    private double acumulado; // lleva el acoulado de cada nodo
-   private Nodo Predecesor;
+   private Node Predecesor;
    
-   public Nodo(){
+   public Node(){
        this.nombre =-1;
        this.visitado = false;
        this.etiqueta = false;
@@ -33,7 +33,7 @@ public class Nodo {
         return acumulado;
     }
 
-    public Nodo getPredecesor() {
+    public Node getPredecesor() {
         return Predecesor;
     }
 
@@ -53,7 +53,7 @@ public class Nodo {
         this.acumulado = acomulado;
     }
 
-    public void setPredecesor(Nodo Predecesor) {
+    public void setPredecesor(Node Predecesor) {
         this.Predecesor = Predecesor;
     }
 

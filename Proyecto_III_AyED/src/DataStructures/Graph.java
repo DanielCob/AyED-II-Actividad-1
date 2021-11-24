@@ -1,6 +1,6 @@
-package GUI;
+package DataStructures;
 
-public class DatosGraficos {
+public class Graph {
 
     private final double MatrizCoeficiente[][] = new double[51][51];
     private final int MatrizAdyacencia[][] = new int[51][51];
@@ -9,7 +9,7 @@ public class DatosGraficos {
     private final String nombre[] = new String[51];
     private int enArbol[];
 
-    public DatosGraficos() {
+    public Graph() {
 
     }
 

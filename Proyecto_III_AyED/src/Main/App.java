@@ -1,33 +1,33 @@
 package Main;
 
-import GUI.DatosGraficos;
-import GUI.PintanrDibujos;
-import DataStructures.AlgoritmoDijkstra;
+import DataStructures.Graph;
+import GUI.ViewGraphics;
+import DataStructures.Dijkstra;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JOptionPane;
 
-public class Inicio extends javax.swing.JFrame {
+public class App extends javax.swing.JFrame {
 
     private int Numerotope = 0;//Numero de nodos 
     
-    DatosGraficos arboles = new DatosGraficos();
+    Graph arboles = new Graph();
 
-    public static void PintarFiguras(int tope, DatosGraficos arboles) {//pinta lo q esta antes en el panel 
+    public static void PintarFiguras(int tope, Graph arboles) {//pinta lo q esta antes en el panel 
         for (int j = 0; j < tope; j++) {
             for (int k = 0; k < tope; k++) {
                 if (arboles.getmAdyacencia(j, k) == 1) {
-                    PintanrDibujos.pinta_Linea(jPanel1.getGraphics(), arboles.getCordeX(j), arboles.getCordeY(j), arboles.getCordeX(k), arboles.getCordeY(k), arboles.getmCoeficiente(j, k));
+                    ViewGraphics.pinta_Linea(jPanel1.getGraphics(), arboles.getCordeX(j), arboles.getCordeY(j), arboles.getCordeX(k), arboles.getCordeY(k), arboles.getmCoeficiente(j, k));
                 }
             }
         }
         for (int j = 0; j < tope; j++) {
-            PintanrDibujos.pinta_Circulo(jPanel1.getGraphics(), arboles.getCordeX(j), arboles.getCordeY(j), arboles.getNombre(j));
+            ViewGraphics.pinta_Circulo(jPanel1.getGraphics(), arboles.getCordeX(j), arboles.getCordeY(j), arboles.getNombre(j));
         }
 
     }
 
-    public Inicio() {
+    public App() {
         initComponents();
         EleccionDestino.setEnabled(false);
         EleccionOrigen.setEnabled(false);
@@ -451,7 +451,7 @@ public class Inicio extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Estas en:" + nombreOrigen);
 
         } else {
-            AlgoritmoDijkstra Dijkstra = new AlgoritmoDijkstra(arboles, Numerotope, origen, destino);
+            Dijkstra Dijkstra = new Dijkstra(arboles, Numerotope, origen, destino);
             Dijkstra.dijkstra();
 
             Font fuente = new Font("Arial", Font.BOLD, 18);
@@ -515,7 +515,7 @@ public class Inicio extends javax.swing.JFrame {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31.8, 0, 0, 0, 30.6, 0}, // 17
             {0, 0, 14.6, 0, 0, 0, 27.8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29.9, 0, 0}, // 18
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14.8, 10.4, 0, 0, 0, 0}  // 19
-            ,};
+            };
 
         //  1     2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18   19
         int xx1[] = {350, 180, 370, 338, 370, 160, 480, 470, 310, 500, 358, 510, 550, 215, 300, 315, 110, 340, 260};
@@ -552,20 +552,22 @@ public class Inicio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Inicio().setVisible(true);
+            new App().setVisible(true);
         });
     }
     //xd
