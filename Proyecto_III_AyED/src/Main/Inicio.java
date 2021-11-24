@@ -59,7 +59,14 @@ public class Inicio extends javax.swing.JFrame {
         LateralSuperior = new javax.swing.JLabel();
         LateralSuperior1 = new javax.swing.JLabel();
         LateralSuperior2 = new javax.swing.JLabel();
-        kmRecorridos2 = new javax.swing.JLabel();
+        varTiempo = new javax.swing.JLabel();
+        kmRecorridos3 = new javax.swing.JLabel();
+        gas = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        AyudaAlViajero = new javax.swing.JLabel();
+        habitantes = new javax.swing.JLabel();
+        JLTiempo3 = new javax.swing.JLabel();
+        interes = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 51));
@@ -67,7 +74,7 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MostrarCaminos.setBackground(new java.awt.Color(255, 255, 204));
-        MostrarCaminos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        MostrarCaminos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         MostrarCaminos.setForeground(new java.awt.Color(0, 0, 0));
         MostrarCaminos.setText("Mostrar Caminos");
         MostrarCaminos.addActionListener(new java.awt.event.ActionListener() {
@@ -75,46 +82,46 @@ public class Inicio extends javax.swing.JFrame {
                 MostrarCaminosActionPerformed(evt);
             }
         });
-        getContentPane().add(MostrarCaminos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 220, 50));
+        getContentPane().add(MostrarCaminos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 210, 50));
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         colorOrigen.setBackground(new java.awt.Color(255, 0, 0));
         colorOrigen.setOpaque(true);
-        jPanel1.add(colorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 20, 20));
+        jPanel1.add(colorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 630, 20, 20));
 
         txtColorOrigen.setBackground(new java.awt.Color(51, 51, 51));
-        txtColorOrigen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtColorOrigen.setForeground(new java.awt.Color(204, 255, 204));
-        txtColorOrigen.setText("Origen--------------->");
+        txtColorOrigen.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        txtColorOrigen.setForeground(new java.awt.Color(255, 255, 255));
+        txtColorOrigen.setText("Origen");
         txtColorOrigen.setOpaque(true);
-        jPanel1.add(txtColorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 190, 40));
+        jPanel1.add(txtColorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 50, 40));
 
         colorDestino.setBackground(new java.awt.Color(51, 255, 51));
         colorDestino.setOpaque(true);
-        jPanel1.add(colorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 20, 20));
+        jPanel1.add(colorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 590, 20, 20));
 
         txtColorDestino.setBackground(new java.awt.Color(51, 51, 51));
-        txtColorDestino.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtColorDestino.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         txtColorDestino.setForeground(new java.awt.Color(255, 255, 255));
-        txtColorDestino.setText("Destino-------------->");
+        txtColorDestino.setText("Destino");
         txtColorDestino.setOpaque(true);
-        jPanel1.add(txtColorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 190, 30));
+        jPanel1.add(txtColorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, 50, 30));
 
         colorNodoVisitado.setBackground(new java.awt.Color(0, 51, 255));
         colorNodoVisitado.setOpaque(true);
-        jPanel1.add(colorNodoVisitado, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 20, 20));
+        jPanel1.add(colorNodoVisitado, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 660, 20, 20));
 
         txtColorNodoRecorrido.setBackground(new java.awt.Color(51, 51, 51));
-        txtColorNodoRecorrido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtColorNodoRecorrido.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         txtColorNodoRecorrido.setForeground(new java.awt.Color(255, 255, 255));
-        txtColorNodoRecorrido.setText("Nodo Recorrido ---->");
+        txtColorNodoRecorrido.setText("Nodo Recorrido ");
         txtColorNodoRecorrido.setOpaque(true);
-        jPanel1.add(txtColorNodoRecorrido, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 190, 40));
+        jPanel1.add(txtColorNodoRecorrido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, 40));
 
         BotonSalir.setBackground(new java.awt.Color(255, 51, 51));
-        BotonSalir.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        BotonSalir.setFont(new java.awt.Font("Dubai", 1, 8)); // NOI18N
         BotonSalir.setForeground(new java.awt.Color(255, 255, 255));
         BotonSalir.setText("X");
         BotonSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +129,7 @@ public class Inicio extends javax.swing.JFrame {
                 BotonSalirActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 50, 50));
+        jPanel1.add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 10, 40, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Isac\\OneDrive\\Documentos\\GitHub\\Proyecto_III_AyED\\Proyecto_III_AyED\\src\\Mapa\\mapa.png")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
@@ -130,7 +137,7 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 850, 730));
 
         EleccionDestino.setBackground(new java.awt.Color(51, 51, 51));
-        EleccionDestino.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EleccionDestino.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         EleccionDestino.setForeground(new java.awt.Color(255, 255, 255));
         EleccionDestino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oriental", "San Nicolás", "Agua Caliente", "Guadalupe", "Dulce Nombre", "Tres Ríos", "Cachí", "Orosi", "Paraiso", "Santiago", "Tejar", "Cervantes", "Juan Viñas", "Concepción", "Occidental", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande" }));
         EleccionDestino.addActionListener(new java.awt.event.ActionListener() {
@@ -138,11 +145,11 @@ public class Inicio extends javax.swing.JFrame {
                 EleccionDestinoActionPerformed(evt);
             }
         });
-        getContentPane().add(EleccionDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 430, 30));
+        getContentPane().add(EleccionDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 420, 30));
 
-        BuscarCamino.setBackground(new java.awt.Color(0, 0, 0));
-        BuscarCamino.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        BuscarCamino.setForeground(new java.awt.Color(255, 255, 255));
+        BuscarCamino.setBackground(new java.awt.Color(51, 51, 51));
+        BuscarCamino.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        BuscarCamino.setForeground(new java.awt.Color(0, 0, 0));
         BuscarCamino.setText("Ruta mas corta\n");
         BuscarCamino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,7 +159,7 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().add(BuscarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 300, 60));
 
         EleccionOrigen.setBackground(new java.awt.Color(51, 51, 51));
-        EleccionOrigen.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EleccionOrigen.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         EleccionOrigen.setForeground(new java.awt.Color(255, 255, 255));
         EleccionOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oriental", "San Nicolás", "Agua Caliente", "Guadalupe", "Dulce Nombre", "Tres Ríos", "Cachí", "Orosi", "Paraiso", "Santiago", "Tejar", "Cervantes", "Juan Viñas", "Concepción", "Occidental", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande" }));
         EleccionOrigen.addActionListener(new java.awt.event.ActionListener() {
@@ -160,26 +167,28 @@ public class Inicio extends javax.swing.JFrame {
                 EleccionOrigenActionPerformed(evt);
             }
         });
-        getContentPane().add(EleccionOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 430, 30));
+        getContentPane().add(EleccionOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 420, 30));
 
+        txtKMAcumulados.setBackground(new java.awt.Color(51, 51, 51));
         txtKMAcumulados.setColumns(20);
+        txtKMAcumulados.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         txtKMAcumulados.setRows(5);
         jScrollPane1.setViewportView(txtKMAcumulados);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 500, 200));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, 520, 90));
 
-        txtDestino.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        txtDestino.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         txtDestino.setForeground(new java.awt.Color(255, 255, 255));
         txtDestino.setText("Selecciona el destino:");
         getContentPane().add(txtDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 260, 40));
 
         kmRecorridos.setBackground(new java.awt.Color(51, 51, 51));
-        kmRecorridos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        kmRecorridos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         kmRecorridos.setForeground(new java.awt.Color(0, 0, 153));
         kmRecorridos.setOpaque(true);
-        getContentPane().add(kmRecorridos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, 280, 40));
+        getContentPane().add(kmRecorridos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 280, 40));
 
-        txtOrigen.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        txtOrigen.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         txtOrigen.setForeground(new java.awt.Color(255, 255, 255));
         txtOrigen.setText("Selecciona el origen:");
         getContentPane().add(txtOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 250, 40));
@@ -203,12 +212,56 @@ public class Inicio extends javax.swing.JFrame {
         LateralSuperior2.setOpaque(true);
         getContentPane().add(LateralSuperior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 500, 30));
 
-        kmRecorridos2.setBackground(new java.awt.Color(51, 51, 51));
-        kmRecorridos2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        kmRecorridos2.setForeground(new java.awt.Color(255, 255, 255));
-        kmRecorridos2.setText("                         Kilometros recorridos:");
-        kmRecorridos2.setOpaque(true);
-        getContentPane().add(kmRecorridos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 420, 570, 40));
+        varTiempo.setBackground(new java.awt.Color(51, 51, 51));
+        varTiempo.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        varTiempo.setForeground(new java.awt.Color(0, 0, 255));
+        varTiempo.setOpaque(true);
+        getContentPane().add(varTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, 300, 50));
+
+        kmRecorridos3.setBackground(new java.awt.Color(51, 51, 51));
+        kmRecorridos3.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        kmRecorridos3.setForeground(new java.awt.Color(255, 255, 255));
+        kmRecorridos3.setText("                         Kilometros recorridos:");
+        kmRecorridos3.setOpaque(true);
+        getContentPane().add(kmRecorridos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 410, 570, 40));
+
+        gas.setBackground(new java.awt.Color(51, 51, 51));
+        gas.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        gas.setForeground(new java.awt.Color(255, 255, 255));
+        gas.setText("Gasolineras: ");
+        gas.setOpaque(true);
+        getContentPane().add(gas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, 500, 40));
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 500, 390));
+
+        AyudaAlViajero.setBackground(new java.awt.Color(51, 51, 51));
+        AyudaAlViajero.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        AyudaAlViajero.setForeground(new java.awt.Color(255, 255, 255));
+        AyudaAlViajero.setText("                                             Ayuda al viajero");
+        AyudaAlViajero.setOpaque(true);
+        getContentPane().add(AyudaAlViajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 490, 500, 40));
+
+        habitantes.setBackground(new java.awt.Color(51, 51, 51));
+        habitantes.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        habitantes.setForeground(new java.awt.Color(255, 255, 255));
+        habitantes.setText(" Habitantes:");
+        habitantes.setOpaque(true);
+        getContentPane().add(habitantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 500, 30));
+
+        JLTiempo3.setBackground(new java.awt.Color(51, 51, 51));
+        JLTiempo3.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        JLTiempo3.setForeground(new java.awt.Color(255, 255, 255));
+        JLTiempo3.setText("       Tiempo estimado: ");
+        JLTiempo3.setOpaque(true);
+        getContentPane().add(JLTiempo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 230, 40));
+
+        interes.setBackground(new java.awt.Color(51, 51, 51));
+        interes.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        interes.setForeground(new java.awt.Color(255, 255, 255));
+        interes.setText("Lugares de interés: ");
+        interes.setOpaque(true);
+        getContentPane().add(interes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 560, 500, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -370,6 +423,7 @@ public class Inicio extends javax.swing.JFrame {
         }
         if ("San Nicolás".equals(nombreDestino)) {
             destino = 1;
+           
         }
         if ("Aguas Calientes".equals(nombreDestino)) {
             destino = 2;
@@ -485,10 +539,12 @@ public class Inicio extends javax.swing.JFrame {
     //xd
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AyudaAlViajero;
     private javax.swing.JButton BotonSalir;
     private javax.swing.JButton BuscarCamino;
     private javax.swing.JComboBox<String> EleccionDestino;
     private javax.swing.JComboBox<String> EleccionOrigen;
+    private javax.swing.JLabel JLTiempo3;
     private javax.swing.JLabel LateralSuperior;
     private javax.swing.JLabel LateralSuperior1;
     private javax.swing.JLabel LateralSuperior2;
@@ -496,16 +552,21 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel colorDestino;
     private javax.swing.JLabel colorNodoVisitado;
     private javax.swing.JLabel colorOrigen;
+    private javax.swing.JLabel gas;
+    private javax.swing.JLabel habitantes;
+    private javax.swing.JLabel interes;
     private javax.swing.JLabel jLabel1;
     public static javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel kmRecorridos;
-    private javax.swing.JLabel kmRecorridos2;
+    private javax.swing.JLabel kmRecorridos3;
     private javax.swing.JLabel txtColorDestino;
     private javax.swing.JLabel txtColorNodoRecorrido;
     private javax.swing.JLabel txtColorOrigen;
     private javax.swing.JLabel txtDestino;
     private javax.swing.JTextArea txtKMAcumulados;
     private javax.swing.JLabel txtOrigen;
+    private javax.swing.JLabel varTiempo;
     // End of variables declaration//GEN-END:variables
 }
