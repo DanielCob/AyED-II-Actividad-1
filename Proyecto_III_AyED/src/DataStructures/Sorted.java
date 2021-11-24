@@ -4,9 +4,10 @@ import java.util.Arrays;
 
 public class Sorted {
     
-    String[] Lugares ={"Oriental","San Nicolás", "Aguas Calientes", "Guadalupe", 
+    public static String[] Lugares ={"Oriental","San Nicolás", "Aguas Calientes", "Guadalupe", 
         "Dulce Nombre", "Tres Ríos", "Cachí", "Orosi", "Paraiso","Santiago","Tejar",
-        "Cervantes", "Juan Viiñas", "Concepción", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande"};
+        "Cervantes", "Juan Viñas", "Concepción", "Carmen", "Corralillo", "Tierra Blanca", "Llano Grande","Occidental"};
+
     
   
     public void Ordenar(){

@@ -2,9 +2,12 @@ package Main;
 
 import DataStructures.Graph;
 import GUI.ViewGraphics;
+import DataStructures.Sorted;
 import DataStructures.Dijkstra;
+import static DataStructures.Sorted.Lugares;
 import java.awt.Color;
 import java.awt.Font;
+import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 public class App extends javax.swing.JFrame {
@@ -521,122 +524,126 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_EleccionCiudadActionPerformed
 
     private void VerInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerInfoActionPerformed
-         String Lugar;
-         Lugar = (String) EleccionCiudad.getSelectedItem();
+        Arrays.sort(Lugares); 
+        String Lugar;
+        Lugar = (String) EleccionCiudad.getSelectedItem();
+    
          
-         if ("Oriental".equals(Lugar)) {
-           
-            habitantes.setText("Habitantes: 12.402");
-            interes.setText("Lugares: La basílica de los Ángeles, Hospital Dr.Max Peralta Jiménez");
-            gas.setText("Gasolineras: Gasolinera Raúl, Servicentro del oeste");
-        }
-        if ("San Nicolás".equals(Lugar)) {
-         
-            habitantes.setText("Habitantes: 29.130");
-            interes.setText("Lugares: Productos Kitty, Quinta Bella Vista, Mucap");
-            gas.setText("Gasolineras: Servicentro Cristo Rey.");
-        }
-        if ("Aguas Calientes".equals(Lugar)) {
+        if (Sorted.Lugares[0].equals(Lugar)) {
           
             habitantes.setText("Habitantes: 35.498");
             interes.setText("Lugares: Iglesia de Navarro del Muñeco, Cabañas Cerro Verde");
             gas.setText("Gasolineras: Gasolinera de Lima, Estación de Servicio Los Ángeles");
         }
-        if ("Guadalupe".equals(Lugar)) {
-         
-            habitantes.setText("Habitantes: 16.199");
-            interes.setText("Lugares: Parque Industrial Cartago, Vitec, Fortech Química");
-            gas.setText("Gasolineras: Estación de Servicio Coopinsermu RL");
-        }
-        if ("Dulce Nombre".equals(Lugar)) {
-           
-            habitantes.setText("Habitantes: 11.773");
-            interes.setText("Lugares: La Casita del Quilting, Aves Don Aquiles");
-            gas.setText("Gasolineras: Delta Dulce Nombre, Servicentro y Autopulido Erick.");
-        }
-        if ("Tres Ríos".equals(Lugar)) {
-         
-            habitantes.setText("Habitantes: 9.331");
-            interes.setText("Lugares: Iglesia Católica de Tres Ríos, Canopy Carpintera");
-            gas.setText("Gasolineras: ServiIndoor, Delta Tres Ríos.");
-        }
-        if ("Cachí".equals(Lugar)) {
+        if (Sorted.Lugares[1].equals(Lugar)) {
           
             habitantes.setText("Habitantes: 5.911");
             interes.setText("Lugares: Finca Zalmari, Represa de Cachí, Escalada de Cachí.");
             gas.setText("Gasolineras: Abastecedor Cachí");
         }
-        if ("Orosi".equals(Lugar)) {
           
-            habitantes.setText("Habitantes: 10.002");
-            interes.setText("Lugares: Rancho Orosí, Río Palomo, II Giardino (Pizzeria)");
-            gas.setText("Gasolineras: SERPASA");
-        }
-        if ("Paraiso".equals(Lugar)) {
-            
-            habitantes.setText("Habitantes: 21.507");
-            interes.setText("Lugares: Mirador de Orosí, UCR");
-            gas.setText("Gasolineras: SERPASA");
-        }
-        if ("Santiago".equals(Lugar)) {
-    
-            habitantes.setText("Habitantes: 6.332");
-            interes.setText("Lugares: Iglesia de Santiago, Plaza de Fútbol de Santiago");
-            gas.setText("Gasolineras: Gasolinera Santiago");
-        }
-        if ("Tejar".equals(Lugar)) {
-            
-            habitantes.setText("Habitantes: 26.630");
-            interes.setText("Lugares: Hotel el Guarco, El Quijongo, Residencial el Cacique");
-            gas.setText("Gasolineras: Servicentro el Guarco, Gasolinera Trova");
-        }
-        if ("Cervantes".equals(Lugar)) {
-           
-            habitantes.setText("Habitantes: 6.759");
-            interes.setText("Lugares: Sala de Bellesa Nela, Countrytico");
-            gas.setText("Gasolineras: Estación de Servicio Cervantes");
-        }
-        if ("Juan Viñas".equals(Lugar)) {
-           
-            habitantes.setText("Habitantes: 7.106");
-            interes.setText("Lugares: Mini Super Santa María, clínica de Juan Viñas");
-            gas.setText("Gasolineras: Gasolinera Juan Viñas");
-        }
-        if ("Concepción".equals(Lugar)) {
-           
-            habitantes.setText("Habitantes: 18.667");
-            interes.setText("Lugares: Centro Comercial Monplaza, Ana Yanci Plazaola");
-            gas.setText("Gasolineras: Abastecedor Concepción");
-        }
-        if ("Occidental".equals(Lugar)) {
-         
-            habitantes.setText("Habitantes: 10.394");
-            interes.setText("Lugares: Extreme Tech Cartago, Colegio de San Luis Gonzaga");
-            gas.setText("Gasolineras: Servicentro Metrópoli");
-        }
-        if ("Carmen".equals(Lugar)) {
+        if (Sorted.Lugares[2].equals(Lugar)) {
         
             habitantes.setText("Habitantes: 19.062");
             interes.setText("Lugares: Cerrajería Autolock, Fashionista sneakers");
             gas.setText("Gasolineras: Servicentro Cartago");
         }
-        if ("Corralillo".equals(Lugar)) {
+        if (Sorted.Lugares[3].equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 6.759");
+            interes.setText("Lugares: Sala de Bellesa Nela, Countrytico");
+            gas.setText("Gasolineras: Estación de Servicio Cervantes");
+        }
+        if (Sorted.Lugares[4].equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 18.667");
+            interes.setText("Lugares: Centro Comercial Monplaza, Ana Yanci Plazaola");
+            gas.setText("Gasolineras: Abastecedor Concepción");
+        }
+        if (Sorted.Lugares[5].equals(Lugar)) {
          
             habitantes.setText("Habitantes: 11.833");
             interes.setText("Lugares: Escuela La Guaria, Laguna lodge");
             gas.setText("Gasolineras: Servicentro Río Conejo");
         }
-        if ("Tierra Blanca".equals(Lugar)) {
+        if (Sorted.Lugares[6].equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 11.773");
+            interes.setText("Lugares: La Casita del Quilting, Aves Don Aquiles");
+            gas.setText("Gasolineras: Delta Dulce Nombre, Servicentro y Autopulido Erick.");
+        }
+        
+        if (Sorted.Lugares[7].equals(Lugar)) {
+         
+            habitantes.setText("Habitantes: 16.199");
+            interes.setText("Lugares: Parque Industrial Cartago, Vitec, Fortech Química");
+            gas.setText("Gasolineras: Estación de Servicio Coopinsermu RL");
+        }
+        if (Sorted.Lugares[8].equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 7.106");
+            interes.setText("Lugares: Mini Super Santa María, clínica de Juan Viñas");
+            gas.setText("Gasolineras: Gasolinera Juan Viñas");
+        }
+        if (Sorted.Lugares[9].equals(Lugar)) {
+            habitantes.setText("Habitantes: 4.958");
+            interes.setText("Lugares: Flores Del Norte, Vivero Llano Verde");
+            gas.setText("Gasolineras: Llantera la plaza");
+        }
+        if (Sorted.Lugares[10].equals(Lugar)) {
+         
+            habitantes.setText("Habitantes: 10.394");
+            interes.setText("Lugares: Extreme Tech Cartago, Colegio de San Luis Gonzaga");
+            gas.setText("Gasolineras: Servicentro Metrópoli");
+        }
+        if (Sorted.Lugares[11].equals(Lugar)) {
+           
+            habitantes.setText("Habitantes: 12.402");
+            interes.setText("Lugares: La basílica de los Ángeles, Hospital Dr.Max Peralta Jiménez");
+            gas.setText("Gasolineras: Gasolinera Raúl, Servicentro del oeste");
+        }
+        if (Sorted.Lugares[12].equals(Lugar)) {
+          
+            habitantes.setText("Habitantes: 10.002");
+            interes.setText("Lugares: Rancho Orosí, Río Palomo, II Giardino (Pizzeria)");
+            gas.setText("Gasolineras: SERPASA");
+        }
+         if (Sorted.Lugares[13].equals(Lugar)) {
+            
+            habitantes.setText("Habitantes: 21.507");
+            interes.setText("Lugares: Mirador de Orosí, UCR");
+            gas.setText("Gasolineras: SERPASA");
+        }
+        if (Sorted.Lugares[14].equals(Lugar)) {
+         
+            habitantes.setText("Habitantes: 29.130");
+            interes.setText("Lugares: Productos Kitty, Quinta Bella Vista, Mucap");
+            gas.setText("Gasolineras: Servicentro Cristo Rey.");
+        }
+        if (Sorted.Lugares[15].equals(Lugar)) {
+    
+            habitantes.setText("Habitantes: 6.332");
+            interes.setText("Lugares: Iglesia de Santiago, Plaza de Fútbol de Santiago");
+            gas.setText("Gasolineras: Gasolinera Santiago");
+        }
+         if (Sorted.Lugares[16].equals(Lugar)) {
+            
+            habitantes.setText("Habitantes: 26.630");
+            interes.setText("Lugares: Hotel el Guarco, El Quijongo, Residencial el Cacique");
+            gas.setText("Gasolineras: Servicentro el Guarco, Gasolinera Trova");
+        }
+          if (Sorted.Lugares[17].equals(Lugar)) {
            
             habitantes.setText("Habitantes: 5.756");
             interes.setText("Lugares: Pulperia San Bosco, Palí, Ferretería Vidal");
             gas.setText("Gasolineras: Servicentro El Surco");
         }
-        if ("Llano Grande".equals(Lugar)) {
-            habitantes.setText("Habitantes: 4.958");
-            interes.setText("Lugares: Flores Del Norte, Vivero Llano Verde");
-            gas.setText("Gasolineras: Llantera la plaza");
-        }
+        if (Sorted.Lugares[18].equals(Lugar)) {
+         
+            habitantes.setText("Habitantes: 9.331");
+            interes.setText("Lugares: Iglesia Católica de Tres Ríos, Canopy Carpintera");
+            gas.setText("Gasolineras: ServiIndoor, Delta Tres Ríos.");
+        }    
     }//GEN-LAST:event_VerInfoActionPerformed
 
     public static void main(String args[]) {
