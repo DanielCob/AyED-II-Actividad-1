@@ -38,7 +38,6 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        MostrarCaminos = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         colorOrigen = new javax.swing.JLabel();
         txtColorOrigen = new javax.swing.JLabel();
@@ -49,8 +48,9 @@ public class Inicio extends javax.swing.JFrame {
         BotonSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        EleccionDestino = new javax.swing.JComboBox<>();
+        MostrarCaminos = new javax.swing.JButton();
         BuscarCamino = new javax.swing.JButton();
+        EleccionDestino = new javax.swing.JComboBox<>();
         EleccionOrigen = new javax.swing.JComboBox<>();
         txtDestino = new javax.swing.JLabel();
         kmRecorridos = new javax.swing.JLabel();
@@ -61,26 +61,18 @@ public class Inicio extends javax.swing.JFrame {
         varTiempo = new javax.swing.JLabel();
         kmRecorridos3 = new javax.swing.JLabel();
         gas = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         AyudaAlViajero = new javax.swing.JLabel();
         habitantes = new javax.swing.JLabel();
         JLTiempo3 = new javax.swing.JLabel();
         interes = new javax.swing.JLabel();
+        min_atrasos = new javax.swing.JSpinner();
+        txtDestino1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 51));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        MostrarCaminos.setBackground(new java.awt.Color(255, 255, 204));
-        MostrarCaminos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        MostrarCaminos.setText("Mostrar Caminos");
-        MostrarCaminos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MostrarCaminosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(MostrarCaminos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 210, 50));
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,18 +97,18 @@ public class Inicio extends javax.swing.JFrame {
         txtColorDestino.setForeground(new java.awt.Color(255, 255, 255));
         txtColorDestino.setText("Destino");
         txtColorDestino.setOpaque(true);
-        jPanel1.add(txtColorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, 50, 30));
+        jPanel1.add(txtColorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, 50, 40));
 
         colorNodoVisitado.setBackground(new java.awt.Color(0, 51, 255));
         colorNodoVisitado.setOpaque(true);
-        jPanel1.add(colorNodoVisitado, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 660, 20, 20));
+        jPanel1.add(colorNodoVisitado, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 670, 20, 20));
 
         txtColorNodoRecorrido.setBackground(new java.awt.Color(51, 51, 51));
         txtColorNodoRecorrido.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         txtColorNodoRecorrido.setForeground(new java.awt.Color(255, 255, 255));
-        txtColorNodoRecorrido.setText("Nodo Recorrido ");
+        txtColorNodoRecorrido.setText("Nodos Recorridos ");
         txtColorNodoRecorrido.setOpaque(true);
-        jPanel1.add(txtColorNodoRecorrido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 100, 40));
+        jPanel1.add(txtColorNodoRecorrido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, 120, 40));
 
         BotonSalir.setBackground(new java.awt.Color(255, 51, 51));
         BotonSalir.setFont(new java.awt.Font("Dubai", 1, 8)); // NOI18N
@@ -135,6 +127,26 @@ public class Inicio extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 850, 730));
 
+        MostrarCaminos.setBackground(new java.awt.Color(255, 255, 204));
+        MostrarCaminos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        MostrarCaminos.setText("Mostrar Caminos");
+        MostrarCaminos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MostrarCaminosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(MostrarCaminos, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 210, 50));
+
+        BuscarCamino.setBackground(new java.awt.Color(51, 51, 51));
+        BuscarCamino.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        BuscarCamino.setText("Calcular la ruta mas corta ");
+        BuscarCamino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscarCaminoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BuscarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 300, 60));
+
         EleccionDestino.setBackground(new java.awt.Color(51, 51, 51));
         EleccionDestino.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         EleccionDestino.setForeground(new java.awt.Color(255, 255, 255));
@@ -144,17 +156,7 @@ public class Inicio extends javax.swing.JFrame {
                 EleccionDestinoActionPerformed(evt);
             }
         });
-        getContentPane().add(EleccionDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 420, 30));
-
-        BuscarCamino.setBackground(new java.awt.Color(51, 51, 51));
-        BuscarCamino.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        BuscarCamino.setText("Ruta mas corta\n");
-        BuscarCamino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BuscarCaminoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BuscarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 300, 60));
+        getContentPane().add(EleccionDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 420, 30));
 
         EleccionOrigen.setBackground(new java.awt.Color(51, 51, 51));
         EleccionOrigen.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
@@ -167,10 +169,10 @@ public class Inicio extends javax.swing.JFrame {
         });
         getContentPane().add(EleccionOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 420, 30));
 
-        txtDestino.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
+        txtDestino.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         txtDestino.setForeground(new java.awt.Color(255, 255, 255));
-        txtDestino.setText("Selecciona el destino:");
-        getContentPane().add(txtDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 260, 40));
+        txtDestino.setText("Ingrese los minutos de atraso:");
+        getContentPane().add(txtDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 260, 40));
 
         kmRecorridos.setBackground(new java.awt.Color(51, 51, 51));
         kmRecorridos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
@@ -181,7 +183,7 @@ public class Inicio extends javax.swing.JFrame {
         txtOrigen.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         txtOrigen.setForeground(new java.awt.Color(255, 255, 255));
         txtOrigen.setText("Selecciona el origen:");
-        getContentPane().add(txtOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 250, 40));
+        getContentPane().add(txtOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 250, 40));
 
         LateralSuperior.setBackground(new java.awt.Color(51, 51, 51));
         LateralSuperior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -196,22 +198,22 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().add(LateralSuperior1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 700, 560, 30));
 
         LateralSuperior2.setBackground(new java.awt.Color(51, 51, 51));
-        LateralSuperior2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        LateralSuperior2.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         LateralSuperior2.setForeground(new java.awt.Color(255, 255, 255));
-        LateralSuperior2.setText("                                          Path finder");
+        LateralSuperior2.setText("                                                   Path finder");
         LateralSuperior2.setOpaque(true);
-        getContentPane().add(LateralSuperior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 500, 30));
+        getContentPane().add(LateralSuperior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 500, 50));
 
         varTiempo.setBackground(new java.awt.Color(51, 51, 51));
         varTiempo.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        varTiempo.setForeground(new java.awt.Color(0, 0, 255));
+        varTiempo.setForeground(new java.awt.Color(255, 255, 255));
         varTiempo.setOpaque(true);
-        getContentPane().add(varTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 510, 270, 40));
+        getContentPane().add(varTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 510, 310, 40));
 
         kmRecorridos3.setBackground(new java.awt.Color(51, 51, 51));
         kmRecorridos3.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         kmRecorridos3.setForeground(new java.awt.Color(255, 255, 255));
-        kmRecorridos3.setText("                         Kilometros recorridos:");
+        kmRecorridos3.setText("                        Kilometros recorridos:");
         kmRecorridos3.setOpaque(true);
         getContentPane().add(kmRecorridos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 470, 570, 40));
 
@@ -221,9 +223,6 @@ public class Inicio extends javax.swing.JFrame {
         gas.setText("Gasolineras: ");
         gas.setOpaque(true);
         getContentPane().add(gas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 660, 500, 40));
-
-        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 500, 440));
 
         AyudaAlViajero.setBackground(new java.awt.Color(51, 51, 51));
         AyudaAlViajero.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
@@ -253,87 +252,19 @@ public class Inicio extends javax.swing.JFrame {
         interes.setOpaque(true);
         getContentPane().add(interes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, 500, 40));
 
+        min_atrasos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        getContentPane().add(min_atrasos, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 100, 40));
+
+        txtDestino1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
+        txtDestino1.setForeground(new java.awt.Color(255, 255, 255));
+        txtDestino1.setText("Selecciona el destino:");
+        getContentPane().add(txtDestino1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 260, 40));
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 500, 420));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void MostrarCaminosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarCaminosActionPerformed
-        //jMenuItem2.setEnabled(false);
-        EleccionOrigen.setEnabled(true);
-        MostrarCaminos.setEnabled(false);
-        MostrarCaminos.setVisible(false);
-     
-
-        jPanel1.paint(jPanel1.getGraphics());
-        
-        int Matriz[][] = {
-          // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 
-            {0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, // 1
-            {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}, // 2
-            {0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0}, // 3
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0}, // 4
-            {1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0}, // 5
-            {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 6
-            {0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0}, // 7
-            {0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 8
-            {1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0}, // 9
-            {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0}, // 10 
-            {1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0}, // 11
-            {0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 12
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 13
-            {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1}, // 14
-            {0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1}, // 15
-            {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0}, // 16
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0}, // 17
-            {0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0}, // 18
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0} // 19
-            
-        };
-
-        double coe[][] = {
-          // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
-            {0, 0, 0, 4.2, 2.4, 0, 0, 0, 6.9, 0, 4.7, 0, 0, 0, 0, 0, 0, 0, 0}, // 1
-            {0, 0, 0, 0, 0, 7.0, 0, 0, 0, 0, 0, 0, 0, 9.0, 0, 0, 0, 0, 0}, // 2
-            {0, 0, 0, 0, 5.2, 0, 0, 0, 10.2, 0, 0, 0, 0, 0, 0, 0, 0, 14.4, 0}, // 3
-            {4.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.8, 0, 0, 0, 3.4, 6.7, 0, 0, 0}, // 4
-            {2.6, 0, 5.2, 0, 0, 0, 0, 0, 0, 18.5, 5.3, 0, 0, 0, 0, 0, 0, 0, 0}, // 5
-            {0, 7.4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 6
-            {0, 0, 0, 0, 0, 0, 0, 11.4, 0, 0, 0, 16.9, 0, 0, 0, 0, 0, 27.1, 0}, // 7
-            {0, 0, 0, 0, 0, 0, 11.4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 8
-            {7.2, 0, 11.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7.8, 0, 0, 0, 0}, // 9
-            {0, 0, 0, 0, 19.2, 0, 0, 0, 0, 0, 24.1, 3.5, 11.9, 0, 0, 0, 0, 0, 0}, // 10
-            {4.2, 0, 0, 2.8, 5.2, 0, 0, 0, 0, 23.3, 0, 0, 0, 0, 0, 8.9, 0, 0, 0}, // 11 
-            {0, 0, 0, 0, 0, 0, 14.2, 0, 0, 3.5, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 12
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 11.9, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 13
-            {0, 9.6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32.3, 0, 15.7}, // 14
-            {0, 0, 0, 3.5, 0, 0, 0, 0, 7.8, 0, 0, 0, 0, 0, 0,3.8, 0, 0, 11.0}, // 15
-            {0, 0, 0, 6.2, 0, 0, 0, 0, 0, 0, 7.7, 0, 0, 0, 3.4, 0, 0, 0, 0}, // 16
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31.8, 0, 0, 0, 30.6, 0}, // 17
-            {0, 0, 14.6, 0, 0, 0, 27.8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29.9, 0, 0}, // 18
-            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14.8, 10.4, 0, 0, 0, 0}  // 19      
-            ,};
-
-                //  1     2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18   19    
-        int xx1[] = {350, 180, 370, 338, 370, 160, 480, 470, 310, 500, 358, 510, 550, 215, 300, 315, 110, 340, 260};
-        int yy1[] = {270, 250, 300, 230, 250, 280, 335, 385, 280, 280, 220, 310, 250, 235, 245, 180, 380, 360, 255};
-        String nom[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
-      
-
-      
-        for (int j = 0; j < 19; j++) {
-            arboles.setCordeX(j, xx1[j]);
-            arboles.setCordeY(j, yy1[j]);
-            arboles.setNombre(j, nom[j]);
-
-        }
-        for (int j = 0; j < 19; j++) {
-            for (int k = 0; k < 19; k++) {
-                arboles.setmAdyacencia(j, k, Matriz[j][k]);
-                arboles.setmCoeficiente(j, k, coe[j][k]);
-            }
-        }
-        Numerotope = 19;
-        PintarFiguras(Numerotope, arboles);
-    }//GEN-LAST:event_MostrarCaminosActionPerformed
 
     private void EleccionDestinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EleccionDestinoActionPerformed
         BuscarCamino.setEnabled(true);
@@ -342,6 +273,10 @@ public class Inicio extends javax.swing.JFrame {
     private void EleccionOrigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EleccionOrigenActionPerformed
         EleccionDestino.setEnabled(true);
     }//GEN-LAST:event_EleccionOrigenActionPerformed
+
+    private void BotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSalirActionPerformed
+        System.exit(0);        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonSalirActionPerformed
 
     private void BuscarCaminoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarCaminoActionPerformed
         int origen = 0, destino = 0;
@@ -406,14 +341,13 @@ public class Inicio extends javax.swing.JFrame {
         if ("Llano Grande".equals(nombreOrigen)) {
             origen = 18;
         }
-        
 
         if ("Oriental".equals(nombreDestino)) {
             destino = 0;
         }
         if ("San Nicolás".equals(nombreDestino)) {
             destino = 1;
-           
+
         }
         if ("Aguas Calientes".equals(nombreDestino)) {
             destino = 2;
@@ -466,10 +400,9 @@ public class Inicio extends javax.swing.JFrame {
         if ("Llano Grande".equals(nombreDestino)) {
             destino = 18;
         }
-        
 
         if (origen == destino) {
-            
+
             JOptionPane.showMessageDialog(null, "Estas en:" + nombreOrigen);
 
         } else {
@@ -477,17 +410,88 @@ public class Inicio extends javax.swing.JFrame {
             Dijkstra.dijkstra();
 
             Font fuente = new Font("Arial", Font.BOLD, 18);
-            
-            kmRecorridos.setText(Math.round(Dijkstra.getAcumulado()) + " KM");
-            varTiempo.setText(Math.round((Dijkstra.getAcumulado()/80)*60) + "min");
-        }
 
+            kmRecorridos.setText(Math.round(Dijkstra.getAcumulado()) + " KM");
+            varTiempo.setText(Math.round((Dijkstra.getAcumulado()/80)*60)+ (Integer) min_atrasos.getValue() + "min");
+        }
 
     }//GEN-LAST:event_BuscarCaminoActionPerformed
 
-    private void BotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSalirActionPerformed
-        System.exit(0);        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSalirActionPerformed
+    private void MostrarCaminosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarCaminosActionPerformed
+        //jMenuItem2.setEnabled(false);
+        EleccionOrigen.setEnabled(true);
+        MostrarCaminos.setEnabled(false);
+        MostrarCaminos.setVisible(false);
+
+        jPanel1.paint(jPanel1.getGraphics());
+
+        int Matriz[][] = {
+            // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
+            {0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, // 1
+            {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}, // 2
+            {0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0}, // 3
+            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0}, // 4
+            {1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0}, // 5
+            {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 6
+            {0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0}, // 7
+            {0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 8
+            {1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0}, // 9
+            {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0}, // 10
+            {1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0}, // 11
+            {0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 12
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 13
+            {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1}, // 14
+            {0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1}, // 15
+            {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0}, // 16
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0}, // 17
+            {0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0}, // 18
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0} // 19
+
+        };
+
+        double coe[][] = {
+            // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
+            {0, 0, 0, 4.2, 2.4, 0, 0, 0, 6.9, 0, 4.7, 0, 0, 0, 0, 0, 0, 0, 0}, // 1
+            {0, 0, 0, 0, 0, 7.0, 0, 0, 0, 0, 0, 0, 0, 9.0, 0, 0, 0, 0, 0}, // 2
+            {0, 0, 0, 0, 5.2, 0, 0, 0, 10.2, 0, 0, 0, 0, 0, 0, 0, 0, 14.4, 0}, // 3
+            {4.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.8, 0, 0, 0, 3.4, 6.7, 0, 0, 0}, // 4
+            {2.6, 0, 5.2, 0, 0, 0, 0, 0, 0, 18.5, 5.3, 0, 0, 0, 0, 0, 0, 0, 0}, // 5
+            {0, 7.4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 6
+            {0, 0, 0, 0, 0, 0, 0, 11.4, 0, 0, 0, 16.9, 0, 0, 0, 0, 0, 27.1, 0}, // 7
+            {0, 0, 0, 0, 0, 0, 11.4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 8
+            {7.2, 0, 11.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7.8, 0, 0, 0, 0}, // 9
+            {0, 0, 0, 0, 19.2, 0, 0, 0, 0, 0, 24.1, 3.5, 11.9, 0, 0, 0, 0, 0, 0}, // 10
+            {4.2, 0, 0, 2.8, 5.2, 0, 0, 0, 0, 23.3, 0, 0, 0, 0, 0, 8.9, 0, 0, 0}, // 11
+            {0, 0, 0, 0, 0, 0, 14.2, 0, 0, 3.5, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 12
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 11.9, 0, 0, 0, 0, 0, 0, 0, 0, 0}, // 13
+            {0, 9.6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32.3, 0, 15.7}, // 14
+            {0, 0, 0, 3.5, 0, 0, 0, 0, 7.8, 0, 0, 0, 0, 0, 0,3.8, 0, 0, 11.0}, // 15
+            {0, 0, 0, 6.2, 0, 0, 0, 0, 0, 0, 7.7, 0, 0, 0, 3.4, 0, 0, 0, 0}, // 16
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31.8, 0, 0, 0, 30.6, 0}, // 17
+            {0, 0, 14.6, 0, 0, 0, 27.8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29.9, 0, 0}, // 18
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14.8, 10.4, 0, 0, 0, 0}  // 19
+            ,};
+
+        //  1     2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18   19
+        int xx1[] = {350, 180, 370, 338, 370, 160, 480, 470, 310, 500, 358, 510, 550, 215, 300, 315, 110, 340, 260};
+        int yy1[] = {270, 250, 300, 230, 250, 280, 335, 385, 280, 280, 220, 310, 250, 235, 245, 180, 380, 360, 255};
+        String nom[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
+
+        for (int j = 0; j < 19; j++) {
+            arboles.setCordeX(j, xx1[j]);
+            arboles.setCordeY(j, yy1[j]);
+            arboles.setNombre(j, nom[j]);
+
+        }
+        for (int j = 0; j < 19; j++) {
+            for (int k = 0; k < 19; k++) {
+                arboles.setmAdyacencia(j, k, Matriz[j][k]);
+                arboles.setmCoeficiente(j, k, coe[j][k]);
+            }
+        }
+        Numerotope = 19;
+        PintarFiguras(Numerotope, arboles);
+    }//GEN-LAST:event_MostrarCaminosActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -544,10 +548,12 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel kmRecorridos;
     private javax.swing.JLabel kmRecorridos3;
+    private javax.swing.JSpinner min_atrasos;
     private javax.swing.JLabel txtColorDestino;
     private javax.swing.JLabel txtColorNodoRecorrido;
     private javax.swing.JLabel txtColorOrigen;
     private javax.swing.JLabel txtDestino;
+    private javax.swing.JLabel txtDestino1;
     private javax.swing.JLabel txtOrigen;
     private javax.swing.JLabel varTiempo;
     // End of variables declaration//GEN-END:variables
