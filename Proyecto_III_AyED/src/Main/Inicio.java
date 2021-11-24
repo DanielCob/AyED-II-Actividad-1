@@ -48,6 +48,7 @@ public class Inicio extends javax.swing.JFrame {
         txtColorNodoRecorrido = new javax.swing.JLabel();
         BotonSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         EleccionDestino = new javax.swing.JComboBox<>();
         BuscarCamino = new javax.swing.JButton();
         EleccionOrigen = new javax.swing.JComboBox<>();
@@ -75,7 +76,6 @@ public class Inicio extends javax.swing.JFrame {
 
         MostrarCaminos.setBackground(new java.awt.Color(255, 255, 204));
         MostrarCaminos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        MostrarCaminos.setForeground(new java.awt.Color(0, 0, 0));
         MostrarCaminos.setText("Mostrar Caminos");
         MostrarCaminos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,9 +130,10 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 10, 40, 40));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Isac\\OneDrive\\Documentos\\GitHub\\Proyecto_III_AyED\\Proyecto_III_AyED\\src\\Mapa\\mapa.png")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Mapa/mapa.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 850, 730));
 
@@ -149,7 +150,6 @@ public class Inicio extends javax.swing.JFrame {
 
         BuscarCamino.setBackground(new java.awt.Color(51, 51, 51));
         BuscarCamino.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        BuscarCamino.setForeground(new java.awt.Color(0, 0, 0));
         BuscarCamino.setText("Ruta mas corta\n");
         BuscarCamino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -556,6 +556,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel habitantes;
     private javax.swing.JLabel interes;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     public static javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
