@@ -68,6 +68,7 @@ public class Inicio extends javax.swing.JFrame {
         min_atrasos = new javax.swing.JSpinner();
         txtDestino1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 51));
@@ -79,18 +80,18 @@ public class Inicio extends javax.swing.JFrame {
 
         colorOrigen.setBackground(new java.awt.Color(255, 0, 0));
         colorOrigen.setOpaque(true);
-        jPanel1.add(colorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 630, 20, 20));
+        jPanel1.add(colorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 630, 20, 20));
 
         txtColorOrigen.setBackground(new java.awt.Color(51, 51, 51));
         txtColorOrigen.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         txtColorOrigen.setForeground(new java.awt.Color(255, 255, 255));
         txtColorOrigen.setText("Origen");
         txtColorOrigen.setOpaque(true);
-        jPanel1.add(txtColorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 50, 40));
+        jPanel1.add(txtColorOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 580, 50, 40));
 
         colorDestino.setBackground(new java.awt.Color(51, 255, 51));
         colorDestino.setOpaque(true);
-        jPanel1.add(colorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 590, 20, 20));
+        jPanel1.add(colorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 590, 20, 20));
 
         txtColorDestino.setBackground(new java.awt.Color(51, 51, 51));
         txtColorDestino.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
@@ -102,6 +103,11 @@ public class Inicio extends javax.swing.JFrame {
         colorNodoVisitado.setBackground(new java.awt.Color(0, 51, 255));
         colorNodoVisitado.setOpaque(true);
         jPanel1.add(colorNodoVisitado, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 670, 20, 20));
+        jPanel1.add(txtColorDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 620, 50, 30));
+
+        colorNodoVisitado.setBackground(new java.awt.Color(0, 51, 255));
+        colorNodoVisitado.setOpaque(true);
+        jPanel1.add(colorNodoVisitado, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 660, 20, 20));
 
         txtColorNodoRecorrido.setBackground(new java.awt.Color(51, 51, 51));
         txtColorNodoRecorrido.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
@@ -109,6 +115,7 @@ public class Inicio extends javax.swing.JFrame {
         txtColorNodoRecorrido.setText("Nodos Recorridos ");
         txtColorNodoRecorrido.setOpaque(true);
         jPanel1.add(txtColorNodoRecorrido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, 120, 40));
+        jPanel1.add(txtColorNodoRecorrido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 650, 120, 40));
 
         BotonSalir.setBackground(new java.awt.Color(255, 51, 51));
         BotonSalir.setFont(new java.awt.Font("Dubai", 1, 8)); // NOI18N
@@ -203,6 +210,7 @@ public class Inicio extends javax.swing.JFrame {
         LateralSuperior2.setText("                                                   Path finder");
         LateralSuperior2.setOpaque(true);
         getContentPane().add(LateralSuperior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 500, 50));
+        getContentPane().add(LateralSuperior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 530, 30));
 
         varTiempo.setBackground(new java.awt.Color(51, 51, 51));
         varTiempo.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
@@ -250,7 +258,10 @@ public class Inicio extends javax.swing.JFrame {
         interes.setForeground(new java.awt.Color(255, 255, 255));
         interes.setText("Lugares de interés: ");
         interes.setOpaque(true);
-        getContentPane().add(interes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, 500, 40));
+        getContentPane().add(interes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, 610, 40));
+
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 600, -1, -1));
 
         min_atrasos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         getContentPane().add(min_atrasos, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 100, 40));
@@ -344,61 +355,118 @@ public class Inicio extends javax.swing.JFrame {
 
         if ("Oriental".equals(nombreDestino)) {
             destino = 0;
+            habitantes.setText("Habitantes: 12.402");
+            interes.setText("Lugares: La basílica de los Ángeles, Hospital Dr.Max Peralta Jiménez");
+            gas.setText("Gasolineras: Gasolinera Raúl, Servicentro del oeste");
         }
         if ("San Nicolás".equals(nombreDestino)) {
             destino = 1;
 
+            habitantes.setText("Habitantes: 29.130");
+            interes.setText("Lugares: Productos Kitty, Quinta Bella Vista, Mucap");
+            gas.setText("Gasolineras: Servicentro Cristo Rey.");
         }
         if ("Aguas Calientes".equals(nombreDestino)) {
             destino = 2;
+            habitantes.setText("Habitantes: 35.498");
+            interes.setText("Lugares: Iglesia de Navarro del Muñeco, Cabañas Cerro Verde");
+            gas.setText("Gasolineras: Gasolinera de Lima, Estación de Servicio Los Ángeles");
         }
         if ("Guadalupe".equals(nombreDestino)) {
             destino = 3;
+            habitantes.setText("Habitantes: 16.199");
+            interes.setText("Lugares: Parque Industrial Cartago, Vitec, Fortech Química");
+            gas.setText("Gasolineras: Estación de Servicio Coopinsermu RL");
         }
         if ("Dulce Nombre".equals(nombreDestino)) {
             destino = 4;
+            habitantes.setText("Habitantes: 11.773");
+            interes.setText("Lugares: La Casita del Quilting, Aves Don Aquiles");
+            gas.setText("Gasolineras: Delta Dulce Nombre, Servicentro y Autopulido Erick.");
         }
         if ("Tres Ríos".equals(nombreDestino)) {
             destino = 5;
+            habitantes.setText("Habitantes: 9.331");
+            interes.setText("Lugares: Iglesia Católica de Tres Ríos, Canopy Carpintera");
+            gas.setText("Gasolineras: ServiIndoor, Delta Tres Ríos.");
         }
         if ("Cachí".equals(nombreDestino)) {
             destino = 6;
+            habitantes.setText("Habitantes: 5.911");
+            interes.setText("Lugares: Finca Zalmari, Represa de Cachí, Escalada de Cachí.");
+            gas.setText("Gasolineras: Abastecedor Cachí");
         }
         if ("Orosí".equals(nombreDestino)) {
             destino = 7;
+            habitantes.setText("Habitantes: 10.002");
+            interes.setText("Lugares: Rancho Orosí, Río Palomo, II Giardino (Pizzeria)");
+            gas.setText("Gasolineras: SERPASA");
         }
         if ("Paraíso".equals(nombreDestino)) {
             destino = 8;
+            habitantes.setText("Habitantes: 21.507");
+            interes.setText("Lugares: Mirador de Orosí, UCR");
+            gas.setText("Gasolineras: SERPASA");
         }
         if ("Santiago".equals(nombreDestino)) {
             destino = 9;
+            habitantes.setText("Habitantes: 6.332");
+            interes.setText("Lugares: Iglesia de Santiago, Plaza de Fútbol de Santiago");
+            gas.setText("Gasolineras: Gasolinera Santiago");
         }
         if ("Tejar".equals(nombreDestino)) {
             destino = 10;
+            habitantes.setText("Habitantes: 26.630");
+            interes.setText("Lugares: Hotel el Guarco, El Quijongo, Residencial el Cacique");
+            gas.setText("Gasolineras: Servicentro el Guarco, Gasolinera Trova");
         }
         if ("Cervantes".equals(nombreDestino)) {
             destino = 11;
+            habitantes.setText("Habitantes: 6.759");
+            interes.setText("Lugares: Sala de Bellesa Nela, Countrytico");
+            gas.setText("Gasolineras: Estación de Servicio Cervantes");
         }
         if ("Juan Viñas".equals(nombreDestino)) {
             destino = 12;
+            habitantes.setText("Habitantes: 7.106");
+            interes.setText("Lugares: Mini Super Santa María, clínica de Juan Viñas");
+            gas.setText("Gasolineras: Gasolinera Juan Viñas");
         }
         if ("Concepción".equals(nombreDestino)) {
             destino = 13;
+            habitantes.setText("Habitantes: 18.667");
+            interes.setText("Lugares: Centro Comercial Monplaza, Ana Yanci Plazaola");
+            gas.setText("Gasolineras: Abastecedor Concepción");
         }
         if ("Occidental".equals(nombreDestino)) {
             destino = 14;
+            habitantes.setText("Habitantes: 10.394");
+            interes.setText("Lugares: Extreme Tech Cartago, Colegio de San Luis Gonzaga");
+            gas.setText("Gasolineras: Servicentro Metrópoli");
         }
         if ("Carmen".equals(nombreDestino)) {
             destino = 15;
+            habitantes.setText("Habitantes: 19.062");
+            interes.setText("Lugares: Cerrajería Autolock, Fashionista sneakers");
+            gas.setText("Gasolineras: Servicentro Cartago");
         }
         if ("Corralillo".equals(nombreDestino)) {
             destino = 16;
+            habitantes.setText("Habitantes: 11.833");
+            interes.setText("Lugares: Escuela La Guaria, Laguna lodge");
+            gas.setText("Gasolineras: Servicentro Río Conejo");
         }
         if ("Tierra Blanca".equals(nombreDestino)) {
             destino = 17;
+            habitantes.setText("Habitantes: 5.756");
+            interes.setText("Lugares: Pulperia San Bosco, Palí, Ferretería Vidal");
+            gas.setText("Gasolineras: Servicentro El Surco");
         }
         if ("Llano Grande".equals(nombreDestino)) {
             destino = 18;
+            habitantes.setText("Habitantes: 4.958");
+            interes.setText("Lugares: Flores Del Norte, Vivero Llano Verde");
+            gas.setText("Gasolineras: Llantera la plaza");
         }
 
         if (origen == destino) {
@@ -544,6 +612,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel interes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     public static javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel kmRecorridos;
