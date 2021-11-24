@@ -184,7 +184,7 @@ public class Inicio extends javax.swing.JFrame {
 
         kmRecorridos.setBackground(new java.awt.Color(51, 51, 51));
         kmRecorridos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        kmRecorridos.setForeground(new java.awt.Color(0, 0, 153));
+        kmRecorridos.setForeground(new java.awt.Color(255, 255, 255));
         kmRecorridos.setOpaque(true);
         getContentPane().add(kmRecorridos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 280, 40));
 
@@ -325,7 +325,7 @@ public class Inicio extends javax.swing.JFrame {
                 //  1     2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18   19    
         int xx1[] = {350, 180, 370, 338, 370, 160, 480, 470, 310, 500, 358, 510, 550, 215, 300, 315, 110, 340, 260};
         int yy1[] = {270, 250, 300, 230, 250, 280, 335, 385, 280, 280, 220, 310, 250, 235, 245, 180, 380, 360, 255};
-        String nom[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"};
+        String nom[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
       
 
       
@@ -496,7 +496,8 @@ public class Inicio extends javax.swing.JFrame {
             txtKMAcumulados.setForeground(Color.BLUE);
             txtKMAcumulados.setEnabled(false);
             
-            kmRecorridos.setText(Dijkstra.getAcumulado() + " KM");
+            kmRecorridos.setText(Math.round(Dijkstra.getAcumulado()) + " KM");
+            varTiempo.setText(Math.round((Dijkstra.getAcumulado()/80)*60) + "min");
         }
 
 
