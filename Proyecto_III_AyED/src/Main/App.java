@@ -48,6 +48,7 @@ public class App extends javax.swing.JFrame {
         BotonSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         BuscarCamino = new javax.swing.JButton();
         MostrarCaminos = new javax.swing.JButton();
         EleccionDestino = new javax.swing.JComboBox<>();
@@ -68,11 +69,11 @@ public class App extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         min_atrasos = new javax.swing.JSpinner();
         txtDestino1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         JLTiempo4 = new javax.swing.JLabel();
         EleccionCiudad = new javax.swing.JComboBox<>();
         VerInfo = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 51));
@@ -114,9 +115,11 @@ public class App extends javax.swing.JFrame {
         });
         jPanel1.add(BotonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 10, 40, 40));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Isac\\OneDrive\\Documentos\\GitHub\\Proyecto_III_AyED\\Proyecto_III_AyED\\src\\Mapa\\mapa.png")); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Isac\\OneDrive\\Documentos\\GitHub\\Proyecto_III_AyED\\Proyecto_III_AyED\\src\\Mapa\\mapa.png")); // NOI18N
+        jLabel4.setText("jLabel4");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 850, 730));
 
@@ -128,7 +131,7 @@ public class App extends javax.swing.JFrame {
                 BuscarCaminoActionPerformed(evt);
             }
         });
-        getContentPane().add(BuscarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 220, 40));
+        getContentPane().add(BuscarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 290, 30));
 
         MostrarCaminos.setBackground(new java.awt.Color(255, 255, 204));
         MostrarCaminos.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
@@ -257,9 +260,6 @@ public class App extends javax.swing.JFrame {
         txtDestino1.setText("Selecciona el destino:");
         getContentPane().add(txtDestino1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 240, 40));
 
-        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 500, 270));
-
         JLTiempo4.setBackground(new java.awt.Color(51, 51, 51));
         JLTiempo4.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         JLTiempo4.setForeground(new java.awt.Color(255, 255, 255));
@@ -278,7 +278,7 @@ public class App extends javax.swing.JFrame {
         getContentPane().add(EleccionCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 160, 30));
 
         VerInfo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        VerInfo.setText("Ver Inforación");
+        VerInfo.setLabel("Ver información");
         VerInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VerInfoActionPerformed(evt);
@@ -289,6 +289,9 @@ public class App extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 520, 130));
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 500, 270));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -708,6 +711,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     public static javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
