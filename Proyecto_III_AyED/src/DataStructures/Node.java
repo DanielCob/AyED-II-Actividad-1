@@ -1,21 +1,30 @@
 package DataStructures;
 
-
+// CLASE PARA CREAR LOS NODOS
 public class Node {    
-   private  int nombre ;
-   private boolean visitado ;
+   //ATRIBUTO NOMBRE DEL NODO
+   private  int nombre;
+   
+   //ATRIBUTO VISITADO DEL NODO
+   private boolean visitado;
+   
+   //ATRIBUTO ETIQUETA DEL NODO
    private boolean etiqueta;
-   private double acumulado; // lleva el acoulado de cada nodo
+   
+   //ATRIBUTO ACUMULADO DEL NODO
+   private double acumulado; 
+   
+   //ATRIBUTO PREDECESOR DEL NODO
    private Node Predecesor;
    
+   //MÉTODO QUE SETEA LOS NODOS MEDIANTE GETTERS Y SETTERS
    public Node(){
        this.nombre =-1;
        this.visitado = false;
        this.etiqueta = false;
-       this.Predecesor = null;
-       this.acumulado = 0;
-
-   }
+       this.Predecesor  = null;
+       this.acumulado =0;       
+    }
 
      public int getNombre() {
         return nombre;
@@ -56,6 +65,4 @@ public class Node {
     public void setPredecesor(Node Predecesor) {
         this.Predecesor = Predecesor;
     }
-
-    
 }
