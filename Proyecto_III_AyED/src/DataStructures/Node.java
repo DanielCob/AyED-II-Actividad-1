@@ -22,9 +22,9 @@ public class Node {
        this.nombre =-1;
        this.visitado = false;
        this.etiqueta = false;
-       this.Predecesor  = null;
-       this.acumulado =0;       
-    }
+       this.Predecesor = null;
+       this.acumulado = 0;
+   }
 
      public int getNombre() {
         return nombre;
