@@ -62,6 +62,11 @@ public class Dijkstra {
                             nodo[j].setVisitado(true);
                             nodo[j].setNombre(j);
                             nodo[j].setPredecesor(nodo[Origen]);
+                        } else if (nodo[j].isVisitado() == false) {
+                            nodo[j].setAcumulado(subtotalAcomulado);
+                            nodo[j].setVisitado(true);
+                            nodo[j].setNombre(j);
+                            nodo[j].setPredecesor(nodo[Origen]);
                         }
                     }
                 }

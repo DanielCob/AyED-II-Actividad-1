@@ -430,18 +430,19 @@ public class App extends javax.swing.JFrame {
         if ("Llano Grande".equals(nombreDestino)) {
             destino = 18;
         }
-
+        
+        //Si el destino y el origen son iguales manda una notificación indicándolo
         if (origen == destino) {
             JOptionPane.showMessageDialog(null, "Estas en:" + nombreOrigen);
 
-        } else {
+        } else { //Aplica el algoritmo de Dijkstra
             Dijkstra Dijkstra = new Dijkstra(arboles, Numerotope, origen, destino);
             Dijkstra.dijkstra();
 
             Font fuente = new Font("Arial", Font.BOLD, 18);
 
-            kmRecorridos.setText(Math.round(Dijkstra.getAcumulado()) + " KM");
-            varTiempo.setText(Math.round((Dijkstra.getAcumulado()/80)*60)+ (Integer) min_atrasos.getValue() + "min");
+            kmRecorridos.setText(Math.round(Dijkstra.getAcumulado()) + " KM"); //Imprime el acumulado en pantalla
+            varTiempo.setText(Math.round((Dijkstra.getAcumulado()/80)*60)+ (Integer) min_atrasos.getValue() + "min"); //Imprime la duración en minutos del recorrido
         }
 
     }//GEN-LAST:event_BuscarCaminoActionPerformed
