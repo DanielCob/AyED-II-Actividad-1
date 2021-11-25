@@ -13,6 +13,7 @@ public class App extends javax.swing.JFrame {
     
     Graph arboles = new Graph();
     
+    
     //Este método dibuja el grafo en la pantalla
     public static void PintarFiguras(int tope, Graph arboles) {
         //Este for dibuja las lineas entre los nodos
