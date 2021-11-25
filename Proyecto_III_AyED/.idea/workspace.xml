@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="35179fd4-f17b-490c-8197-4f4cc51799a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/AbsoluteLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Proyecto_III_AyED.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto_III_AyED.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Proyecto_III_AyED/Mapa/mapa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Anexo/DocuExterna_Proyecto_III.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Anexo/DocuExterna_Proyecto_III.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Graphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Graphics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/App.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
