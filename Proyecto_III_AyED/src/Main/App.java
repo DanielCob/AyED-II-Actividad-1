@@ -432,6 +432,7 @@ public class App extends javax.swing.JFrame {
         if ("Llano Grande".equals(nombreDestino)) {
             destino = 18;
         }
+        //xd
         
         //Si el destino y el origen son iguales manda una notificación indicándolo
         if (origen == destino) {
