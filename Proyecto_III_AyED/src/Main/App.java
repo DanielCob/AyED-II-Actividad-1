@@ -118,7 +118,6 @@ public class App extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Isac\\OneDrive\\Documentos\\GitHub\\Proyecto_III_AyED\\Proyecto_III_AyED\\src\\Mapa\\mapa.png")); // NOI18N
-        jLabel4.setText("jLabel4");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 850, 730));
