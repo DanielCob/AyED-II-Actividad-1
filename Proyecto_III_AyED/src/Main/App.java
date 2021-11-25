@@ -1,22 +1,21 @@
 package Main;
 
-import DataStructures.Graph;
-import GUI.ViewGraphics;
-import DataStructures.Sorted;
-import DataStructures.Dijkstra;
+import DataStructures.*;
 import static DataStructures.Sorted.Lugares;
-import java.awt.Color;
-import java.awt.Font;
+import GUI.*;
+import java.awt.*;
 import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 public class App extends javax.swing.JFrame {
 
-    private int Numerotope = 0;//Numero de nodos 
+    private int Numerotope;//Numero de nodos 
     
     Graph arboles = new Graph();
-
-    public static void PintarFiguras(int tope, Graph arboles) {//pinta lo q esta antes en el panel 
+    
+    //Este método dibuja el grafo en la pantalla
+    public static void PintarFiguras(int tope, Graph arboles) {
+        //Este for dibuja las lineas entre los nodos
         for (int j = 0; j < tope; j++) {
             for (int k = 0; k < tope; k++) {
                 if (arboles.getmAdyacencia(j, k) == 1) {
@@ -24,6 +23,7 @@ public class App extends javax.swing.JFrame {
                 }
             }
         }
+        //Este método dibuja los nodos
         for (int j = 0; j < tope; j++) {
             ViewGraphics.pinta_Circulo(jPanel1.getGraphics(), arboles.getCordeX(j), arboles.getCordeY(j), arboles.getNombre(j));
         }
@@ -293,18 +293,22 @@ public class App extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Si se selecciona el destino se habilita el boton de buscar camino
     private void EleccionDestinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EleccionDestinoActionPerformed
         BuscarCamino.setEnabled(true);
     }//GEN-LAST:event_EleccionDestinoActionPerformed
-
+    
+    //Se se selecciona el origen se habilita la selección del destino
     private void EleccionOrigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EleccionOrigenActionPerformed
         EleccionDestino.setEnabled(true);
     }//GEN-LAST:event_EleccionOrigenActionPerformed
-
+    
+    //Boton para cerrar la aplicación
     private void BotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSalirActionPerformed
         System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_BotonSalirActionPerformed
-
+    
+    //Funcionalidad del boton buscar camino
     private void BuscarCaminoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarCaminoActionPerformed
         int origen = 0, destino = 0;
         String nombreOrigen, nombreDestino;
@@ -428,7 +432,6 @@ public class App extends javax.swing.JFrame {
         }
 
         if (origen == destino) {
-
             JOptionPane.showMessageDialog(null, "Estas en:" + nombreOrigen);
 
         } else {
@@ -450,7 +453,8 @@ public class App extends javax.swing.JFrame {
         MostrarCaminos.setVisible(false);
 
         jPanel1.paint(jPanel1.getGraphics());
-
+         
+        //Matriz del grafo
         int Matriz[][] = {
           // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
             {0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, // 1
@@ -474,7 +478,8 @@ public class App extends javax.swing.JFrame {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0} // 19
 
         };
-
+        
+        //Matriz de los pesos del grafo
         double coe[][] = {
             // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
             {0, 0, 0, 4.2, 2.4, 0, 0, 0, 6.9, 0, 4.7, 0, 0, 0, 0, 0, 0, 0, 0}, // 1
@@ -498,6 +503,7 @@ public class App extends javax.swing.JFrame {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14.8, 10.4, 0, 0, 0, 0}  // 19
             };
 
+        //Posiciones en la pantalla de cada nodo
         //  1     2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18   19
         int xx1[] = {350, 180, 370, 338, 370, 160, 480, 470, 310, 500, 358, 510, 550, 215, 300, 315, 110, 340, 260};
         int yy1[] = {270, 250, 300, 230, 250, 280, 335, 385, 280, 280, 220, 310, 250, 235, 245, 180, 380, 360, 255};
@@ -507,8 +513,8 @@ public class App extends javax.swing.JFrame {
             arboles.setCordeX(j, xx1[j]);
             arboles.setCordeY(j, yy1[j]);
             arboles.setNombre(j, nom[j]);
-
         }
+        
         for (int j = 0; j < 19; j++) {
             for (int k = 0; k < 19; k++) {
                 arboles.setmAdyacencia(j, k, Matriz[j][k]);
@@ -519,10 +525,12 @@ public class App extends javax.swing.JFrame {
         PintarFiguras(Numerotope, arboles);
     }//GEN-LAST:event_MostrarCaminosActionPerformed
 
+    //
     private void EleccionCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EleccionCiudadActionPerformed
         EleccionCiudad.setEnabled(true);
     }//GEN-LAST:event_EleccionCiudadActionPerformed
 
+    //Este método ordena el array de distritos y edita la información que debe aparecer en la ventana de ayuda al viajero.
     private void VerInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerInfoActionPerformed
         Arrays.sort(Lugares); 
         String Lugar;
@@ -678,7 +686,6 @@ public class App extends javax.swing.JFrame {
             new App().setVisible(true);
         });
     }
-    //xd
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AyudaAlViajero;

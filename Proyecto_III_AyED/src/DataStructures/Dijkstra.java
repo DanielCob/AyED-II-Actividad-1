@@ -1,6 +1,6 @@
 package DataStructures;
 
-import GUI.ViewGraphics;
+import GUI.*;
 import static Main.App.PintarFiguras;
 import static Main.App.jPanel1;
 import java.awt.Color;
@@ -58,11 +58,6 @@ public class Dijkstra {
                         subtotalAcomulado = nodo[Origen].getAcumulado() + arboles.getmCoeficiente(j, Origen);
                         
                         if (subtotalAcomulado <= nodo[j].getAcumulado() && nodo[j].isVisitado() == true && nodo[j].isEtiqueta() == false) {
-                            nodo[j].setAcumulado(subtotalAcomulado);
-                            nodo[j].setVisitado(true);
-                            nodo[j].setNombre(j);
-                            nodo[j].setPredecesor(nodo[Origen]);
-                        } else if (nodo[j].isVisitado() == false) {
                             nodo[j].setAcumulado(subtotalAcomulado);
                             nodo[j].setVisitado(true);
                             nodo[j].setNombre(j);

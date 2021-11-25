@@ -1,7 +1,7 @@
 package GUI;
 
-import DataStructures.Graph;
-import GUI.ViewGraphics;
+import DataStructures.*;
+import GUI.*;
 import static Main.App.jPanel1;
 
 public class Graphics {
